@@ -3,67 +3,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Midas</title>
-    <script
-      src="./script.js"
-      defer></script>
+    <script src="./script.js" defer></script>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"
-      defer></script>
-    <link
-      rel="stylesheet"
-      href="./twOutput.css" />
+      defer
+    ></script>
+    <link rel="stylesheet" href="./twOutput.css" />
   </head>
   <body class="font-biryani">
     <header
       id="header"
-      class="bg-white sticky top-0 px-4 md:px-16 w-full transition-transform duration-300 ease-in-out z-50">
+      class="bg-white sticky top-0 px-4 md:px-16 w-full transition-transform duration-300 ease-in-out z-50"
+    >
       <div class="mx-auto pr-8 max-w-[100vw] flex justify-between items-center">
         <div class="flex items-center">
           <div class="logoContainer bg-customGray p-4">
             <img
               src="./assets/images/Logo.png"
               alt="Logo"
-              class="w-auto h-auto" />
+              class="w-auto h-auto"
+            />
           </div>
         </div>
         <nav class="hidden md:flex space-x-4 py-2 text-sm">
-          <a
-            href="#"
-            class="text-gray-700 hover:text-gray-900"
-            >Home</a
-          >
-          <a
-            href="#"
-            class="text-gray-700 hover:text-gray-900"
-            >About</a
-          >
+          <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
           <div class="relative group">
             <a
               href="#"
-              class="text-gray-700 hover:text-gray-900 flex items-center">
+              class="text-gray-700 hover:text-gray-900 flex items-center"
+            >
               Products
               <svg
                 class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 9l-7 7-7-7"></path>
+                  d="M19 9l-7 7-7-7"
+                ></path>
               </svg>
             </a>
             <div
-              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
               <a
                 href="#"
                 class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -76,31 +70,31 @@
               >
             </div>
           </div>
-          <a
-            href="#"
-            class="text-gray-700 hover:text-gray-900"
-            >Resources</a
-          >
+          <a href="#" class="text-gray-700 hover:text-gray-900">Resources</a>
           <div class="relative group">
             <a
               href="#"
-              class="text-gray-700 hover:text-gray-900 flex items-center">
+              class="text-gray-700 hover:text-gray-900 flex items-center"
+            >
               Calculator
               <svg
                 class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 9l-7 7-7-7"></path>
+                  d="M19 9l-7 7-7-7"
+                ></path>
               </svg>
             </a>
             <div
-              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
               <a
                 href="#"
                 class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -113,143 +107,127 @@
               >
             </div>
           </div>
-          <a
-            href="#"
-            class="text-gray-700 hover:text-gray-900"
-            >Contact</a
-          >
+          <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
         </nav>
-        <button
-          id="burger"
-          class="md:hidden text-gray-700 focus:outline-none">
+        <button id="burger" class="md:hidden text-gray-700 focus:outline-none">
           <svg
             class="w-6 h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
           </svg>
         </button>
       </div>
       <div
         id="mobile-menu"
-        class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-300">
+        class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-300"
+      >
         <div class="flex justify-between items-center pr-4 border-b">
           <div class="flex items-center">
             <div class="logoContainer bg-customGray p-4">
               <img
                 src="./assets/images/Logo.png"
                 alt="Logo"
-                class="w-auto h-auto" />
+                class="w-auto h-auto"
+              />
             </div>
           </div>
-          <button
-            id="close-burger"
-            class="text-gray-700 focus:outline-none">
+          <button id="close-burger" class="text-gray-700 focus:outline-none">
             <svg
               class="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"></path>
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
             </svg>
           </button>
         </div>
         <nav class="p-4">
-          <a
-            href="#"
-            class="block py-2 text-gray-700 hover:bg-gray-100"
+          <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
             >Home</a
           >
-          <a
-            href="#"
-            class="block py-2 text-gray-700 hover:bg-gray-100"
+          <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
             >About</a
           >
           <div class="relative">
             <button
               class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
-              onclick="toggleDropdown('mobile-products')">
+              onclick="toggleDropdown('mobile-products')"
+            >
               Products
               <svg
                 class="ml-1 w-4 h-4 transition-transform duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 9l-7 7-7-7"></path>
+                  d="M19 9l-7 7-7-7"
+                ></path>
               </svg>
             </button>
-            <div
-              id="mobile-products"
-              class="hidden pl-4">
-              <a
-                href="#"
-                class="block py-2 text-gray-700 hover:bg-gray-100"
+            <div id="mobile-products" class="hidden pl-4">
+              <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
                 >Product 1</a
               >
-              <a
-                href="#"
-                class="block py-2 text-gray-700 hover:bg-gray-100"
+              <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
                 >Product 2</a
               >
             </div>
           </div>
-          <a
-            href="#"
-            class="block py-2 text-gray-700 hover:bg-gray-100"
+          <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
             >Resources</a
           >
           <div class="relative">
             <button
               class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
-              onclick="toggleDropdown('mobile-calculator')">
+              onclick="toggleDropdown('mobile-calculator')"
+            >
               Calculator
               <svg
                 class="ml-1 w-4 h-4 transition-transform duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 9l-7 7-7-7"></path>
+                  d="M19 9l-7 7-7-7"
+                ></path>
               </svg>
             </button>
-            <div
-              id="mobile-calculator"
-              class="hidden pl-4">
-              <a
-                href="#"
-                class="block py-2 text-gray-700 hover:bg-gray-100"
+            <div id="mobile-calculator" class="hidden pl-4">
+              <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
                 >Calculator 1</a
               >
-              <a
-                href="#"
-                class="block py-2 text-gray-700 hover:bg-gray-100"
+              <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
                 >Calculator 2</a
               >
             </div>
           </div>
-          <a
-            href="#"
-            class="block py-2 text-gray-700 hover:bg-gray-100"
+          <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
             >Contact</a
           >
         </nav>
@@ -263,9 +241,11 @@
               <img
                 src="./assets/images/Group 6.png"
                 alt=""
-                class="w-full h-auto" />
+                class="w-full h-auto"
+              />
               <div
-                class="md:rotate-6 md:motion-rotate-loop-12/mirror md:motion-loop-infinite md:motion-ease-spring-bouncy md:motion-duration-2000 md:motion-delay-2000 absolute top-1 left-0 md:top-[15%] md:left-[5%] inline-flex items-center gap-2 px-4 py-2 bg-white text-black rounded-lg shadow-md font-sans">
+                class="md:rotate-6 md:motion-rotate-loop-12/mirror md:motion-loop-infinite md:motion-ease-spring-bouncy md:motion-duration-2000 md:motion-delay-2000 absolute top-1 left-0 md:top-[15%] md:left-[5%] inline-flex items-center gap-2 px-4 py-2 bg-white text-black rounded-lg shadow-md font-sans"
+              >
                 <div class="grid place-content-center text-center">
                   <div class="text-lg leading-none font-bold text-green-500">
                     150+
@@ -276,29 +256,33 @@
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 48 48"
-                    class="w-5 h-5">
+                    class="w-5 h-5"
+                  >
                     <path
                       fill="#EA4335"
-                      d="M24 9.5c3.8 0 6.4 1.6 7.9 2.9l5.8-5.7C34.1 3.6 29.6 2 24 2 14.9 2 7.3 7.8 4.4 15.5l6.9 5.3C13.1 14.4 18 9.5 24 9.5z" />
+                      d="M24 9.5c3.8 0 6.4 1.6 7.9 2.9l5.8-5.7C34.1 3.6 29.6 2 24 2 14.9 2 7.3 7.8 4.4 15.5l6.9 5.3C13.1 14.4 18 9.5 24 9.5z"
+                    />
                     <path
                       fill="#4285F4"
-                      d="M46.2 24.3c0-1.6-.1-3.3-.4-4.9H24v9.3h12.5c-.5 2.8-2 5.2-4.3 6.9l6.7 5.2c3.9-3.6 6.3-8.8 6.3-15.4z" />
+                      d="M46.2 24.3c0-1.6-.1-3.3-.4-4.9H24v9.3h12.5c-.5 2.8-2 5.2-4.3 6.9l6.7 5.2c3.9-3.6 6.3-8.8 6.3-15.4z"
+                    />
                     <path
                       fill="#FBBC04"
-                      d="M10.8 28.5c-.7-2-.7-4.2 0-6.1l-6.9-5.3c-2.4 4.8-2.4 10.6 0 15.4l6.9-5.3z" />
+                      d="M10.8 28.5c-.7-2-.7-4.2 0-6.1l-6.9-5.3c-2.4 4.8-2.4 10.6 0 15.4l6.9-5.3z"
+                    />
                     <path
                       fill="#34A853"
-                      d="M24 46c5.9 0 10.9-1.9 14.5-5.1l-6.7-5.2c-1.9 1.3-4.4 2.1-7.8 2.1-6 0-10.9-4-12.7-9.3l-6.9 5.3C7.3 40.2 14.9 46 24 46z" />
-                    <path
-                      fill="none"
-                      d="M2 2h44v44H2z" />
+                      d="M24 46c5.9 0 10.9-1.9 14.5-5.1l-6.7-5.2c-1.9 1.3-4.4 2.1-7.8 2.1-6 0-10.9-4-12.7-9.3l-6.9 5.3C7.3 40.2 14.9 46 24 46z"
+                    />
+                    <path fill="none" d="M2 2h44v44H2z" />
                   </svg>
                   <span class="leading-none">Google <br />Reviews</span>
                 </span>
               </div>
 
               <div
-                class="md:-rotate-6 md:-motion-rotate-loop-[12deg]/mirror md:motion-loop-infinite md:motion-ease-spring-bouncy md:motion-duration-2000 md:motion-delay-2000 absolute grid text-center top-1 right-0 md:top-[5%] md:right-[25%] items-center gap-2 px-4 py-2 bg-white text-black rounded-lg shadow-md font-sans">
+                class="md:-rotate-6 md:-motion-rotate-loop-[12deg]/mirror md:motion-loop-infinite md:motion-ease-spring-bouncy md:motion-duration-2000 md:motion-delay-2000 absolute grid text-center top-1 right-0 md:top-[5%] md:right-[25%] items-center gap-2 px-4 py-2 bg-white text-black rounded-lg shadow-md font-sans"
+              >
                 <span class="text-xl leading-none font-bold text-green-500"
                   >300+</span
                 >
@@ -315,9 +299,7 @@
                 Our financial solutions align with your lifestyle and goals,
                 empowering you to thrive today and grow tomorrow.
               </p>
-              <a
-                class="btn-primary px-4 py-2 max-w-max"
-                href="#">
+              <a class="btn-primary px-4 py-2 max-w-max" href="#">
                 Get Started Today
               </a>
             </div>
@@ -325,41 +307,26 @@
         </div>
       </section>
       <section class="logoCarousel px-4 md:px-16 py-12">
-        <div
-          id="logo-carousel"
-          class="splide"
-          aria-label="Logo Carousel">
+        <div id="logo-carousel" class="splide" aria-label="Logo Carousel">
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
-                <img
-                  src="./assets/images/logo1.png"
-                  alt="Logo 1" />
+                <img src="./assets/images/logo1.png" alt="Logo 1" />
               </li>
               <li class="splide__slide">
-                <img
-                  src="./assets/images/logo2.png"
-                  alt="Logo 2" />
+                <img src="./assets/images/logo2.png" alt="Logo 2" />
               </li>
               <li class="splide__slide">
-                <img
-                  src="./assets/images/logo3.png"
-                  alt="Logo 3" />
+                <img src="./assets/images/logo3.png" alt="Logo 3" />
               </li>
               <li class="splide__slide">
-                <img
-                  src="./assets/images/logo4.png"
-                  alt="Logo 4" />
+                <img src="./assets/images/logo4.png" alt="Logo 4" />
               </li>
               <li class="splide__slide">
-                <img
-                  src="./assets/images/logo5.png"
-                  alt="Logo 5" />
+                <img src="./assets/images/logo5.png" alt="Logo 5" />
               </li>
               <li class="splide__slide">
-                <img
-                  src="./assets/images/logo6.png"
-                  alt="Logo 6" />
+                <img src="./assets/images/logo6.png" alt="Logo 6" />
               </li>
             </ul>
           </div>
@@ -368,11 +335,10 @@
       <section class="whoAreWe px-4 py-8 md:px-16 md:py-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           <div class="imgWrapper relative w-full pt-[6%]">
-            <img
-              src="./assets/images/whoWeAre.png"
-              alt="" />
+            <img src="./assets/images/whoWeAre.png" alt="" />
             <div
-              class="absolute right-[10%] -top-[6%] w-[15%] h-[25%] -z-10 bg-polka"></div>
+              class="absolute right-[10%] -top-[6%] w-[15%] h-[25%] -z-10 bg-polka"
+            ></div>
           </div>
           <div class="txtWrapper my-auto relative">
             <h1 class="h1 uppercase">Who Are We</h1>
@@ -389,13 +355,10 @@
               lifestyle & financial goals. We believe if we put you first,
               business will take care of itself.
             </p>
-            <a
-              href="#"
-              class="btn-primary px-4 py-2 max-w-max"
-              >Learn More</a
-            >
+            <a href="#" class="btn-primary px-4 py-2 max-w-max">Learn More</a>
             <div
-              class="absolute -right-6 md:-right-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"></div>
+              class="absolute -right-6 md:-right-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"
+            ></div>
           </div>
         </div>
       </section>
@@ -413,12 +376,11 @@
               experience the Midas touch, no matter your location.
             </p>
             <div
-              class="absolute -left-6 md:-left-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"></div>
+              class="absolute -left-6 md:-left-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"
+            ></div>
           </div>
           <div class="imgWrapper">
-            <img
-              src="./assets/images/AustraliaMap.png"
-              alt="" />
+            <img src="./assets/images/AustraliaMap.png" alt="" />
           </div>
         </div>
       </section>
@@ -430,8 +392,9 @@
         </p>
         <div
           id="services-carousel"
-          class="splide"
-          aria-label="Our Services Carousel">
+          class="splide mt-4"
+          aria-label="Our Services Carousel"
+        >
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
@@ -439,7 +402,8 @@
                   <img
                     src="./assets/images/service1.png"
                     alt="Service 1"
-                    class="w-full aspect-[3/2] object-cover" />
+                    class="w-full aspect-[3/2] object-cover"
+                  />
                   <div class="p-4">
                     <h2 class="text-lg font-bold">Service 1</h2>
                     <p class="line-clamp-3">
@@ -454,7 +418,8 @@
                   <img
                     src="./assets/images/service2.png"
                     alt="Service 2"
-                    class="w-full aspect-[3/2] object-cover" />
+                    class="w-full aspect-[3/2] object-cover"
+                  />
                   <div class="p-4">
                     <h2 class="text-lg font-bold">Service 2</h2>
                     <p class="line-clamp-3">
@@ -469,7 +434,8 @@
                   <img
                     src="./assets/images/service3.png"
                     alt="Service 3"
-                    class="w-full aspect-[3/2] object-cover" />
+                    class="w-full aspect-[3/2] object-cover"
+                  />
                   <div class="p-4">
                     <h2 class="text-lg font-bold">Service 3</h2>
                     <p class="line-clamp-3">
@@ -483,17 +449,20 @@
           </div>
           <div class="splide__arrows relative flex gap-2">
             <button
-              class="splide__arrow bg-transparent -scale-100 splide__arrow--prev">
+              class="splide__arrow bg-transparent -scale-100 splide__arrow--prev"
+            >
               <svg
                 class="w-6 h-6 fill-none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M15 19l-7-7 7-7"></path>
+                  d="M15 19l-7-7 7-7"
+                ></path>
               </svg>
             </button>
             <button class="splide__arrow bg-transparent splide__arrow--next">
@@ -502,12 +471,14 @@
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M9 5l7 7-7 7"></path>
+                  d="M9 5l7 7-7 7"
+                ></path>
               </svg>
             </button>
           </div>

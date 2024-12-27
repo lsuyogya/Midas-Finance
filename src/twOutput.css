@@ -1,71 +1,71 @@
 @font-face {
-  font-family: 'Biryani';
+  font-family: "Biryani";
 
-  src: url('./assets/fonts/Biryani/Biryani-Black.ttf') format('truetype');
+  src: url("./assets/fonts/Biryani/Biryani-Black.ttf") format("truetype");
 
   font-weight: 900;
 }
 
 @font-face {
-  font-family: 'Biryani';
+  font-family: "Biryani";
 
-  src: url('./assets/fonts/Biryani/Biryani-Bold.ttf') format('truetype');
+  src: url("./assets/fonts/Biryani/Biryani-Bold.ttf") format("truetype");
 
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Biryani';
+  font-family: "Biryani";
 
-  src: url('./assets/fonts/Biryani/Biryani-ExtraBold.ttf') format('truetype');
+  src: url("./assets/fonts/Biryani/Biryani-ExtraBold.ttf") format("truetype");
 
   font-weight: 800;
 }
 
 @font-face {
-  font-family: 'Biryani';
+  font-family: "Biryani";
 
-  src: url('./assets/fonts/Biryani/Biryani-ExtraLight.ttf') format('truetype');
+  src: url("./assets/fonts/Biryani/Biryani-ExtraLight.ttf") format("truetype");
 
   font-weight: 200;
 }
 
 @font-face {
-  font-family: 'Biryani';
+  font-family: "Biryani";
 
-  src: url('./assets/fonts/Biryani/Biryani-Light.ttf') format('truetype');
+  src: url("./assets/fonts/Biryani/Biryani-Light.ttf") format("truetype");
 
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'Biryani';
+  font-family: "Biryani";
 
-  src: url('./assets/fonts/Biryani/Biryani-Regular.ttf') format('truetype');
+  src: url("./assets/fonts/Biryani/Biryani-Regular.ttf") format("truetype");
 
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Biryani';
+  font-family: "Biryani";
 
-  src: url('./assets/fonts/Biryani/Biryani-SemiBold.ttf') format('truetype');
+  src: url("./assets/fonts/Biryani/Biryani-SemiBold.ttf") format("truetype");
 
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Unna';
+  font-family: "Unna";
 
-  src: url('./assets/fonts/unna/Unna-Bold.ttf') format('truetype');
+  src: url("./assets/fonts/unna/Unna-Bold.ttf") format("truetype");
 
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Unna';
+  font-family: "Unna";
 
-  src: url('./assets/fonts/unna/Unna-BoldItalic.ttf') format('truetype');
+  src: url("./assets/fonts/unna/Unna-BoldItalic.ttf") format("truetype");
 
   font-weight: 700;
 
@@ -73,17 +73,17 @@
 }
 
 @font-face {
-  font-family: 'Unna';
+  font-family: "Unna";
 
-  src: url('./assets/fonts/unna/Unna-Italic.ttf') format('truetype');
+  src: url("./assets/fonts/unna/Unna-Italic.ttf") format("truetype");
 
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Unna';
+  font-family: "Unna";
 
-  src: url('./assets/fonts/unna/Unna-Regular.ttf') format('truetype');
+  src: url("./assets/fonts/unna/Unna-Regular.ttf") format("truetype");
 
   font-weight: 400;
 }
@@ -123,7 +123,7 @@ main {
   transition-duration: 300ms;
   transition-timing-function: ease-in;
   font-weight: 600;
-  font-family: 'Biryani';
+  font-family: "Biryani";
   display: block;
   cursor: pointer;
   &:hover {
@@ -174,6 +174,19 @@ main {
 
 #services-carousel .splide__arrow svg {
   fill: none;
+}
+
+#services-carousel .splide__arrow {
+  position: relative;
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  transform: unset;
+}
+
+#services-carousel .splide__arrow.splide__arrow--prev {
+  transform: scaleX(-1);
 }
 
 *, ::before, ::after {
@@ -731,7 +744,7 @@ video {
 }
 
 html {
-  font-family: 'Biryani', sans-serif;
+  font-family: "Biryani", sans-serif;
 }
 
 h1,
@@ -740,7 +753,7 @@ h1,
   h4,
   h5,
   h6 {
-  font-family: 'Unna', serif;
+  font-family: "Unna", serif;
 }
 
 .fixed {
@@ -828,6 +841,10 @@ h1,
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .line-clamp-3 {

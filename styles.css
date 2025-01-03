@@ -1,0 +1,210 @@
+@font-face {
+  font-family: 'Biryani';
+  src: url('./assets/fonts/Biryani/Biryani-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Biryani';
+  src: url('./assets/fonts/Biryani/Biryani-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Biryani';
+  src: url('./assets/fonts/Biryani/Biryani-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Biryani';
+  src: url('./assets/fonts/Biryani/Biryani-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Biryani';
+  src: url('./assets/fonts/Biryani/Biryani-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Biryani';
+  src: url('./assets/fonts/Biryani/Biryani-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Biryani';
+  src: url('./assets/fonts/Biryani/Biryani-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Unna';
+  src: url('./assets/fonts/unna/Unna-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Unna';
+  src: url('./assets/fonts/unna/Unna-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Unna';
+  src: url('./assets/fonts/unna/Unna-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Unna';
+  src: url('./assets/fonts/unna/Unna-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@layer base {
+  html {
+    font-family: 'Biryani', sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Unna', serif;
+    @apply text-customGray;
+  }
+}
+
+main {
+  /* padding-top: var(--header-height, 4rem); */
+}
+
+.container {
+  @apply mx-auto px-2 md:px-0;
+}
+.banner-full-no-header {
+  max-height: calc(100vh - var(--header-height));
+}
+.btn-primary {
+  --_borderWidth: 2px;
+  @apply text-customGray;
+  border-radius: 0.75rem;
+  background: linear-gradient(90deg, #f2e9a6 0%, #d5c473 100%);
+  box-shadow: 0px 12px 20px 0px #0000000d;
+  border: var(--_borderWidth) solid transparent;
+  background-size: calc(100% + 2 * var(--_borderWidth))
+    calc(100% + 2 * var(--_borderWidth));
+  background-position: calc(-1 * var(--_borderWidth)) 0;
+  transition-property: background-size, border-color, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  font-weight: 600;
+  font-family: 'Biryani';
+  display: block;
+  cursor: pointer;
+  &:hover {
+    background-size: 350% 350%; /* Appears as if the gradient is transitioning */
+    border-color: #d5c473;
+    box-shadow: 0px 12px 20px 0px #0000000d, 0px 4px 4px 0px #0000000d;
+  }
+}
+
+.bannerTitle {
+  font-size: clamp(calc(32rem / 16), 4.5vw, calc(69rem / 16));
+  line-height: 0.95;
+}
+
+.logoCarousel {
+  .splide__arrow {
+    display: none;
+  }
+  /* .splide__slide {
+    display: flex;
+    max-width: 10rem;
+  } */
+  img {
+    /* margin-inline: auto; */
+    filter: brightness(0) saturate(100%) invert(13%) sepia(4%) saturate(529%)
+      hue-rotate(251deg) brightness(102%) contrast(86%);
+    transition: filter 300ms ease;
+    &:hover {
+      filter: none;
+    }
+  }
+}
+.bg-polka {
+  background-color: #fff;
+  background-image: radial-gradient(
+    var(--tw-color-primary, #f1e7a3) 2px,
+    transparent 2px
+  );
+  background-size: 8px 8px;
+}
+.h1 {
+  font-size: clamp(calc(24rem / 16), calc(44vw / 1400 * 100), calc(44rem / 16));
+  line-height: 1.05;
+}
+.splide__arrow svg {
+  fill: none;
+}
+.splide__arrow {
+  position: relative;
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  transform: unset;
+}
+.splide__arrow.splide__arrow--prev {
+  transform: scaleX(-1);
+}
+
+form .inputGrp,
+form {
+  display: grid;
+  gap: 1rem;
+  input,
+  select {
+    /* border: 2px solid var(--tw-color-formGray, #92918f); */
+    @apply border-2 border-formGray rounded-xl px-6 py-2 bg-transparent;
+  }
+  input::placeholder {
+    color: #a1a1a1; /* Example style */
+  }
+  select:not(:user-valid) {
+    color: #a1a1a1;
+  }
+}
+#services-carousel .card {
+  max-width: 600px;
+}
+#testimonial-carousel .card {
+  @apply bg-light;
+  box-shadow: 0px 12px 20px 0px #0000000d;
+}
+#testimonial-carousel .cardContainer {
+  @apply relative overflow-visible;
+  --_quoteWidth: 4rem;
+  padding-block-start: var(--_quoteWidth);
+  padding-block-end: calc(var(--_quoteWidth) / 2);
+  padding-inline: calc(var(--_quoteWidth) / 4);
+}
+#testimonial-carousel .cardContainer .quote {
+  position: absolute;
+  width: calc(var(--_quoteWidth) + 0.25rem);
+  height: calc(var(--_quoteWidth) + 0.25rem);
+  aspect-ratio: 1;
+  top: 0%;
+  transform: translate(0, 50%);
+  left: 4rem;
+  content: '';
+  background-image: url('./assets/images/quote.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}

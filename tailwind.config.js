@@ -23,7 +23,9 @@ module.exports = {
       primary: '#f1e7a3',
       secondary: '#9b51b4',
       customGray: '#323032',
+      darkerGray: '#666666',
       light: '#f7f4f0',
+      formGray: '#92918f',
     },
   },
   safelist: [

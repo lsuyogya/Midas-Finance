@@ -3,61 +3,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Midas</title>
-    <script src="./script.js" defer></script>
+    <script
+      src="./script.js"
+      defer></script>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"
-      defer
-    ></script>
-    <link rel="stylesheet" href="./twOutput.css" />
+      defer></script>
+    <link
+      rel="stylesheet"
+      href="./twOutput.css" />
   </head>
   <body class="font-biryani">
     <header
       id="header"
-      class="bg-white sticky top-0 px-4 md:px-16 w-full transition-transform duration-300 ease-in-out z-50"
-    >
+      class="bg-white sticky top-0 px-4 md:px-16 w-full transition-transform duration-300 ease-in-out z-50">
       <div class="mx-auto pr-8 max-w-[100vw] flex justify-between items-center">
         <div class="flex items-center">
           <div class="logoContainer bg-customGray p-4">
             <img
               src="./assets/images/Logo.png"
               alt="Logo"
-              class="w-auto h-auto"
-            />
+              class="w-auto h-auto" />
           </div>
         </div>
         <nav class="hidden md:flex space-x-4 py-2 text-sm">
-          <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
-          <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+          <a
+            href="#"
+            class="text-gray-700 hover:text-gray-900"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 hover:text-gray-900"
+            >About</a
+          >
           <div class="relative group">
             <a
               href="#"
-              class="text-gray-700 hover:text-gray-900 flex items-center"
-            >
+              class="text-gray-700 hover:text-gray-900 flex items-center">
               Products
               <svg
                 class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
+                  d="M19 9l-7 7-7-7"></path>
               </svg>
             </a>
             <div
-              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
+              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <a
                 href="#"
                 class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -70,31 +76,31 @@
               >
             </div>
           </div>
-          <a href="#" class="text-gray-700 hover:text-gray-900">Resources</a>
+          <a
+            href="#"
+            class="text-gray-700 hover:text-gray-900"
+            >Resources</a
+          >
           <div class="relative group">
             <a
               href="#"
-              class="text-gray-700 hover:text-gray-900 flex items-center"
-            >
+              class="text-gray-700 hover:text-gray-900 flex items-center">
               Calculator
               <svg
                 class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
+                  d="M19 9l-7 7-7-7"></path>
               </svg>
             </a>
             <div
-              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
+              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <a
                 href="#"
                 class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -107,133 +113,149 @@
               >
             </div>
           </div>
-          <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+          <a
+            href="#"
+            class="text-gray-700 hover:text-gray-900"
+            >Contact</a
+          >
         </nav>
-        <button id="burger" class="md:hidden text-gray-700 focus:outline-none">
+        <button
+          id="burger"
+          class="md:hidden text-gray-700 focus:outline-none">
           <svg
             class="w-6 h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
+              d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
       <div
         id="mobile-menu"
-        class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-300"
-      >
+        class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-300">
         <div class="flex justify-between items-center pr-4 border-b">
           <div class="flex items-center">
             <div class="logoContainer bg-customGray p-4">
               <img
                 src="./assets/images/Logo.png"
                 alt="Logo"
-                class="w-auto h-auto"
-              />
+                class="w-auto h-auto" />
             </div>
           </div>
-          <button id="close-burger" class="text-gray-700 focus:outline-none">
+          <button
+            id="close-burger"
+            class="text-gray-700 focus:outline-none">
             <svg
               class="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
+                d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
         <nav class="p-4">
-          <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:bg-gray-100"
             >Home</a
           >
-          <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:bg-gray-100"
             >About</a
           >
           <div class="relative">
             <button
               class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
-              onclick="toggleDropdown('mobile-products')"
-            >
+              onclick="toggleDropdown('mobile-products')">
               Products
               <svg
                 class="ml-1 w-4 h-4 transition-transform duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
+                  d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
-            <div id="mobile-products" class="hidden pl-4">
-              <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
+            <div
+              id="mobile-products"
+              class="hidden pl-4">
+              <a
+                href="#"
+                class="block py-2 text-gray-700 hover:bg-gray-100"
                 >Product 1</a
               >
-              <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
+              <a
+                href="#"
+                class="block py-2 text-gray-700 hover:bg-gray-100"
                 >Product 2</a
               >
             </div>
           </div>
-          <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:bg-gray-100"
             >Resources</a
           >
           <div class="relative">
             <button
               class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
-              onclick="toggleDropdown('mobile-calculator')"
-            >
+              onclick="toggleDropdown('mobile-calculator')">
               Calculator
               <svg
                 class="ml-1 w-4 h-4 transition-transform duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
+                  d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
-            <div id="mobile-calculator" class="hidden pl-4">
-              <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
+            <div
+              id="mobile-calculator"
+              class="hidden pl-4">
+              <a
+                href="#"
+                class="block py-2 text-gray-700 hover:bg-gray-100"
                 >Calculator 1</a
               >
-              <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
+              <a
+                href="#"
+                class="block py-2 text-gray-700 hover:bg-gray-100"
                 >Calculator 2</a
               >
             </div>
           </div>
-          <a href="#" class="block py-2 text-gray-700 hover:bg-gray-100"
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:bg-gray-100"
             >Contact</a
           >
         </nav>
       </div>
     </header>
-    <main class="min-h-[100vh] text-customGray">
+    <main class="min-h-[100vh] text-darkerGray">
       <section class="bg-light p-4 md:pb-0 md:pl-16 md:pr-0">
         <div class="banner-full-no-header overflow-hidden">
           <div class="grid grid-cols-1 md:grid-cols-[3fr_4fr] gap-12">
@@ -241,11 +263,9 @@
               <img
                 src="./assets/images/Group 6.png"
                 alt=""
-                class="w-full h-auto"
-              />
+                class="w-full h-auto" />
               <div
-                class="md:rotate-6 md:motion-rotate-loop-12/mirror md:motion-loop-infinite md:motion-ease-spring-bouncy md:motion-duration-2000 md:motion-delay-2000 absolute top-1 left-0 md:top-[15%] md:left-[5%] inline-flex items-center gap-2 px-4 py-2 bg-white text-black rounded-lg shadow-md font-sans"
-              >
+                class="md:rotate-6 md:motion-rotate-loop-12/mirror md:motion-loop-infinite md:motion-ease-spring-bouncy md:motion-duration-2000 md:motion-delay-2000 absolute top-1 left-0 md:top-[15%] md:left-[5%] inline-flex items-center gap-2 px-4 py-2 bg-white text-black rounded-lg shadow-md font-sans">
                 <div class="grid place-content-center text-center">
                   <div class="text-lg leading-none font-bold text-green-500">
                     150+
@@ -256,33 +276,29 @@
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 48 48"
-                    class="w-5 h-5"
-                  >
+                    class="w-5 h-5">
                     <path
                       fill="#EA4335"
-                      d="M24 9.5c3.8 0 6.4 1.6 7.9 2.9l5.8-5.7C34.1 3.6 29.6 2 24 2 14.9 2 7.3 7.8 4.4 15.5l6.9 5.3C13.1 14.4 18 9.5 24 9.5z"
-                    />
+                      d="M24 9.5c3.8 0 6.4 1.6 7.9 2.9l5.8-5.7C34.1 3.6 29.6 2 24 2 14.9 2 7.3 7.8 4.4 15.5l6.9 5.3C13.1 14.4 18 9.5 24 9.5z" />
                     <path
                       fill="#4285F4"
-                      d="M46.2 24.3c0-1.6-.1-3.3-.4-4.9H24v9.3h12.5c-.5 2.8-2 5.2-4.3 6.9l6.7 5.2c3.9-3.6 6.3-8.8 6.3-15.4z"
-                    />
+                      d="M46.2 24.3c0-1.6-.1-3.3-.4-4.9H24v9.3h12.5c-.5 2.8-2 5.2-4.3 6.9l6.7 5.2c3.9-3.6 6.3-8.8 6.3-15.4z" />
                     <path
                       fill="#FBBC04"
-                      d="M10.8 28.5c-.7-2-.7-4.2 0-6.1l-6.9-5.3c-2.4 4.8-2.4 10.6 0 15.4l6.9-5.3z"
-                    />
+                      d="M10.8 28.5c-.7-2-.7-4.2 0-6.1l-6.9-5.3c-2.4 4.8-2.4 10.6 0 15.4l6.9-5.3z" />
                     <path
                       fill="#34A853"
-                      d="M24 46c5.9 0 10.9-1.9 14.5-5.1l-6.7-5.2c-1.9 1.3-4.4 2.1-7.8 2.1-6 0-10.9-4-12.7-9.3l-6.9 5.3C7.3 40.2 14.9 46 24 46z"
-                    />
-                    <path fill="none" d="M2 2h44v44H2z" />
+                      d="M24 46c5.9 0 10.9-1.9 14.5-5.1l-6.7-5.2c-1.9 1.3-4.4 2.1-7.8 2.1-6 0-10.9-4-12.7-9.3l-6.9 5.3C7.3 40.2 14.9 46 24 46z" />
+                    <path
+                      fill="none"
+                      d="M2 2h44v44H2z" />
                   </svg>
                   <span class="leading-none">Google <br />Reviews</span>
                 </span>
               </div>
 
               <div
-                class="md:-rotate-6 md:-motion-rotate-loop-[12deg]/mirror md:motion-loop-infinite md:motion-ease-spring-bouncy md:motion-duration-2000 md:motion-delay-2000 absolute grid text-center top-1 right-0 md:top-[5%] md:right-[25%] items-center gap-2 px-4 py-2 bg-white text-black rounded-lg shadow-md font-sans"
-              >
+                class="md:-rotate-6 md:-motion-rotate-loop-[12deg]/mirror md:motion-loop-infinite md:motion-ease-spring-bouncy md:motion-duration-2000 md:motion-delay-2000 absolute grid text-center top-1 right-0 md:top-[5%] md:right-[25%] items-center gap-2 px-4 py-2 bg-white text-black rounded-lg shadow-md font-sans">
                 <span class="text-xl leading-none font-bold text-green-500"
                   >300+</span
                 >
@@ -299,7 +315,9 @@
                 Our financial solutions align with your lifestyle and goals,
                 empowering you to thrive today and grow tomorrow.
               </p>
-              <a class="btn-primary px-4 py-2 max-w-max" href="#">
+              <a
+                class="btn-primary px-4 py-2 max-w-max"
+                href="#">
                 Get Started Today
               </a>
             </div>
@@ -307,26 +325,41 @@
         </div>
       </section>
       <section class="logoCarousel px-4 md:px-16 py-12">
-        <div id="logo-carousel" class="splide" aria-label="Logo Carousel">
+        <div
+          id="logo-carousel"
+          class="splide"
+          aria-label="Logo Carousel">
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
-                <img src="./assets/images/logo1.png" alt="Logo 1" />
+                <img
+                  src="./assets/images/logo1.png"
+                  alt="Logo 1" />
               </li>
               <li class="splide__slide">
-                <img src="./assets/images/logo2.png" alt="Logo 2" />
+                <img
+                  src="./assets/images/logo2.png"
+                  alt="Logo 2" />
               </li>
               <li class="splide__slide">
-                <img src="./assets/images/logo3.png" alt="Logo 3" />
+                <img
+                  src="./assets/images/logo3.png"
+                  alt="Logo 3" />
               </li>
               <li class="splide__slide">
-                <img src="./assets/images/logo4.png" alt="Logo 4" />
+                <img
+                  src="./assets/images/logo4.png"
+                  alt="Logo 4" />
               </li>
               <li class="splide__slide">
-                <img src="./assets/images/logo5.png" alt="Logo 5" />
+                <img
+                  src="./assets/images/logo5.png"
+                  alt="Logo 5" />
               </li>
               <li class="splide__slide">
-                <img src="./assets/images/logo6.png" alt="Logo 6" />
+                <img
+                  src="./assets/images/logo6.png"
+                  alt="Logo 6" />
               </li>
             </ul>
           </div>
@@ -335,13 +368,14 @@
       <section class="whoAreWe px-4 py-8 md:px-16 md:py-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           <div class="imgWrapper relative w-full pt-[6%]">
-            <img src="./assets/images/whoWeAre.png" alt="" />
+            <img
+              src="./assets/images/whoWeAre.png"
+              alt="" />
             <div
-              class="absolute right-[10%] -top-[6%] w-[15%] h-[25%] -z-10 bg-polka"
-            ></div>
+              class="absolute right-[10%] -top-[6%] w-[15%] h-[25%] -z-10 bg-polka"></div>
           </div>
           <div class="txtWrapper my-auto relative">
-            <h1 class="h1 uppercase">Who Are We</h1>
+            <h1 class="h1 uppercase mb-4">Who Are We</h1>
             <p class="my-4">
               Our aim is to create and tailor solutions to suit where you are
               today, offering you the greatest possible benefits from your home
@@ -355,17 +389,20 @@
               lifestyle & financial goals. We believe if we put you first,
               business will take care of itself.
             </p>
-            <a href="#" class="btn-primary px-4 py-2 max-w-max">Learn More</a>
+            <a
+              href="#"
+              class="btn-primary px-4 py-2 max-w-max"
+              >Learn More</a
+            >
             <div
-              class="absolute -right-6 md:-right-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"
-            ></div>
+              class="absolute -right-6 md:-right-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"></div>
           </div>
         </div>
       </section>
       <section class="px-4 py-8 md:px-16 md:py-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           <div class="txtWrapper relative max-h-max my-auto">
-            <h1 class="h1 uppercase">
+            <h1 class="h1 uppercase mb-4">
               We're Everywhere You Need Us In Australia
             </h1>
             <p class="my-4">
@@ -376,16 +413,17 @@
               experience the Midas touch, no matter your location.
             </p>
             <div
-              class="absolute -left-6 md:-left-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"
-            ></div>
+              class="absolute -left-6 md:-left-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"></div>
           </div>
           <div class="imgWrapper">
-            <img src="./assets/images/AustraliaMap.png" alt="" />
+            <img
+              src="./assets/images/AustraliaMap.png"
+              alt="" />
           </div>
         </div>
       </section>
       <section class="ourServices bg-light px-4 py-8 md:px-16 md:py-24">
-        <h1 class="h1 uppercase">Our Services</h1>
+        <h1 class="h1 uppercase mb-4">Our Services</h1>
         <p>
           We offer a range of financial solutions tailored to meet your unique
           needs.
@@ -393,8 +431,7 @@
         <div
           id="services-carousel"
           class="splide mt-4"
-          aria-label="Our Services Carousel"
-        >
+          aria-label="Our Services Carousel">
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
@@ -402,8 +439,7 @@
                   <img
                     src="./assets/images/service1.png"
                     alt="Service 1"
-                    class="w-full aspect-[3/2] object-cover"
-                  />
+                    class="w-full aspect-[3/2] object-cover" />
                   <div class="p-4">
                     <h2 class="text-lg font-bold">Service 1</h2>
                     <p class="line-clamp-3">
@@ -418,8 +454,7 @@
                   <img
                     src="./assets/images/service2.png"
                     alt="Service 2"
-                    class="w-full aspect-[3/2] object-cover"
-                  />
+                    class="w-full aspect-[3/2] object-cover" />
                   <div class="p-4">
                     <h2 class="text-lg font-bold">Service 2</h2>
                     <p class="line-clamp-3">
@@ -434,8 +469,7 @@
                   <img
                     src="./assets/images/service3.png"
                     alt="Service 3"
-                    class="w-full aspect-[3/2] object-cover"
-                  />
+                    class="w-full aspect-[3/2] object-cover" />
                   <div class="p-4">
                     <h2 class="text-lg font-bold">Service 3</h2>
                     <p class="line-clamp-3">
@@ -449,20 +483,17 @@
           </div>
           <div class="splide__arrows relative flex gap-2">
             <button
-              class="splide__arrow bg-transparent -scale-100 splide__arrow--prev"
-            >
+              class="splide__arrow bg-transparent -scale-100 splide__arrow--prev">
               <svg
                 class="w-6 h-6 fill-none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M15 19l-7-7 7-7"
-                ></path>
+                  d="M15 19l-7-7 7-7"></path>
               </svg>
             </button>
             <button class="splide__arrow bg-transparent splide__arrow--next">
@@ -471,16 +502,312 @@
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                ></path>
+                  d="M9 5l7 7-7 7"></path>
               </svg>
             </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="whyChooseUs px-4 py-8 md:px-16 md:py-24 grid lg:grid-cols-[1fr_444px] gap-6 md:gap-12">
+        <div class="contentWrapper gap-4 self-center py-12">
+          <h1 class="h1 uppercase mb-4">Why Choose Us</h1>
+          <p class="max-w-[65ch]">
+            We offer more than just loans—we offer peace of mind, personalized
+            service, and financial solutions that align with your goals.
+          </p>
+          <div class="grid md:grid-cols-2 gap-12 mt-12">
+            <div class="grid-item grid grid-cols-[90px_1fr] gap-4">
+              <div class="imgWrapper">
+                <img
+                  src="./assets/images/whyUs1.svg"
+                  alt="" />
+              </div>
+              <div class="txtWrapper self-center">
+                <h2 class="text-lg md:text-2xl font-semibold">
+                  Quick Approvals
+                </h2>
+                <p>
+                  Our streamlined process delivers quick responses, empowering
+                  you to move forward confidently.
+                </p>
+              </div>
+            </div>
+            <div class="grid-item grid grid-cols-[90px_1fr] gap-4">
+              <div class="imgWrapper">
+                <img
+                  src="./assets/images/whyUs2.svg"
+                  alt="" />
+              </div>
+              <div class="txtWrapper self-center">
+                <h2 class="text-lg md:text-2xl font-semibold">
+                  Trusted Expertise
+                </h2>
+                <p>
+                  With years of expertise, our team guides you every step of the
+                  way.
+                </p>
+              </div>
+            </div>
+            <div class="grid-item grid grid-cols-[90px_1fr] gap-4">
+              <div class="imgWrapper">
+                <img
+                  src="./assets/images/whyUs2.svg"
+                  alt="" />
+              </div>
+              <div class="txtWrapper self-center">
+                <h2 class="text-lg md:text-2xl font-semibold">
+                  Tailored Solutions
+                </h2>
+                <p>
+                  We offer personalized home loans tailored to your needs,
+                  lifestyle, and goals.
+                </p>
+              </div>
+            </div>
+            <div class="grid-item grid grid-cols-[90px_1fr] gap-4">
+              <div class="imgWrapper">
+                <img
+                  src="./assets/images/whyUs2.svg"
+                  alt="" />
+              </div>
+              <div class="txtWrapper self-center">
+                <h2 class="text-lg md:text-2xl font-semibold">
+                  Competitive Rates
+                </h2>
+                <p>
+                  We partner with diverse lenders to secure the best rates,
+                  saving you money over your loan's lifetime.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="imgWrapper h-full w-full">
+          <img
+            src="./assets/images/WhyChooseUs.png"
+            alt=""
+            class="h-full w-full object-cover" />
+        </div>
+      </section>
+      <section class="bookingForm bg-light">
+        <div class="grid lg:grid-cols-2 gap-4">
+          <img
+            src="./assets/images/Group 9.png"
+            alt=""
+            class="w-full h-auto lg:h-full lg:w-auto" />
+          <div
+            class="txtWrapper px-4 py-4 md:pr-16 md:py-16 max-w-[700px] mx-auto">
+            <h1 class="h1 uppercase mb-4">
+              Request a call back from a Lending Specialist
+            </h1>
+            <form>
+              <div class="inputGrp">
+                <input
+                  id="fullName"
+                  type="text"
+                  placeholder="Full Name" />
+              </div>
+
+              <div class="inputGrp">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email" />
+              </div>
+              <div class="inputGrp">
+                <input
+                  id="message"
+                  type="text"
+                  placeholder="I'd like to ..." />
+              </div>
+              <div class="inputGrp">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email" />
+              </div>
+              <div class="inputGrp md:grid-cols-2">
+                <input
+                  id="mobileNo"
+                  type="text"
+                  placeholder="Mobile no" />
+
+                <input
+                  id="postCode"
+                  type="text"
+                  placeholder="Postcode" />
+              </div>
+              <div class="inputGrp">
+                <select id="day">
+                  <option
+                    value=""
+                    disabled
+                    selected>
+                    Select your availability
+                  </option>
+                  <option value="sunday">Sunday</option>
+                  <option value="monday">Monday</option>
+                  <option value="tuesday">Tuesday</option>
+                  <option value="wednesday">Wednesday</option>
+                  <option value="thursday">Thursday</option>
+                  <option value="friday">Friday</option>
+                </select>
+              </div>
+              <div class="inputGrp">
+                <button class="btn-primary px-4 py-2 w-full">
+                  Book A Time
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="clientTestimonial px-4 py-8 md:px-16 md:py-24">
+        <h1 class="h1 uppercase mb-4">
+          What Customer Say <br />
+          About Us
+        </h1>
+        <div
+          id="testimonial-carousel"
+          class="splide mt-4"
+          aria-label="Client Testimonial Carousel">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="cardContainer">
+                  <div class="card bg-light px-8 md:px-12 py-10 md:py-16">
+                    <p class="line-clamp-6">
+                      If you’re looking for a top broker, look no further. Mihir
+                      is the best you’ll find. He’s professional, extremely
+                      competent and does everything for you. We were lucky to
+                      have had him as our broker. I came across his business
+                      card, gave him a call and from there it was first class
+                      service. Mihir, there’s no words that can describe how
+                      thankful we are for your services. There’s no doubt I will
+                      always come to you when it comes to my Finances. Thank you
+                      so much.
+                    </p>
+                    <div class="flex content-center gap-4 mt-4 items-center">
+                      <img
+                        src="./assets/images/service1.png"
+                        alt="Service 1"
+                        class="w-full aspect-[1/1] object-cover max-w-12 rounded-full" />
+                      <span class="text-lg md:text-xl text-black"
+                        >Jack Mari</span
+                      >
+                    </div>
+                  </div>
+                  <div class="quote"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="flex justify-between mt-4">
+            <div class="splide__arrows relative flex gap-2">
+              <button
+                class="splide__arrow bg-transparent -scale-100 splide__arrow--prev">
+                <svg
+                  class="w-6 h-6 fill-none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </button>
+              <button class="splide__arrow bg-transparent splide__arrow--next">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+            <button class="btn-primary px-4 py-2">View All</button>
+          </div>
+        </div>
+      </section>
+      <section class="loanAssessment bg-light">
+        <div class="grid gap-4 lg:grid-cols-[4fr_3fr]">
+          <img
+            src="./assets/images/loanAssessment.png"
+            alt="" />
+          <div
+            class="txtWrapper my-auto px-4 py-4 lg:pl-0 lg:pr-16 lg:py-16 mx-auto">
+            <h1 class="h1 uppercase mb-4 lg:max-w-[20ch]">
+              Start Your Journey Toward a New Home Today
+            </h1>
+            <p class="max-w-[60ch]">
+              Our experts are ready to guide you through the process. Let’s make
+              your dream home a reality with personalized loan options.
+            </p>
+            <a
+              href="#"
+              class="btn-primary px-4 py-2 w-full max-w-[60ch] text-center mt-8"
+              >Get Your Free Loan Assessment Now</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="contactUs px-4 py-8 md:px-16 md:py-24">
+        <h1 class="h1 uppercase mb-4 lg:max-w-[20ch]">
+          Finance Insights & Resources
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="card overflow-hidden">
+            <img
+              src="./assets/images/financeInsight1.png"
+              alt="Resource 1"
+              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="p-4">
+              <h2 class="text-lg font-bold">Resource 1</h2>
+              <p class="line-clamp-3">
+                Description for resource 1. This is a brief description that
+                will be clipped to three lines.
+              </p>
+            </div>
+          </div>
+          <div class="card overflow-hidden">
+            <img
+              src="./assets/images/financeInsight2.png"
+              alt="Resource 2"
+              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="p-4">
+              <h2 class="text-lg font-bold">Resource 2</h2>
+              <p class="line-clamp-3">
+                Description for resource 2. This is a brief description that
+                will be clipped to three lines.
+              </p>
+            </div>
+          </div>
+          <div class="card overflow-hidden">
+            <img
+              src="./assets/images/financeInsight3.png"
+              alt="Resource 3"
+              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="p-4">
+              <h2 class="text-lg font-bold">Resource 3</h2>
+              <p class="line-clamp-3">
+                Description for resource 3. This is a brief description that
+                will be clipped to three lines.
+              </p>
+            </div>
           </div>
         </div>
       </section>

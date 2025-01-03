@@ -78,3 +78,24 @@ document.addEventListener('DOMContentLoaded', function () {
     gap: '2rem',
   }).mount();
 });
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#testimonial-carousel', {
+    type: 'loop',
+    perPage: 3,
+    autoplay: true,
+    interval: 3000,
+    arrows: true,
+    pagination: false,
+    autoWidth: false,
+    perMove: 1,
+    // gap: '2rem',
+    breakpoints: {
+      1024: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 1,
+      },
+    },
+  }).mount();
+});

@@ -181,7 +181,10 @@ form {
   }
 }
 #services-carousel .card {
-  max-width: 600px;
+  max-width: min(
+    600px,
+    100vw - (2rem * 2 + 2rem)
+  ); /* padding inline * 2 for both sides + marginRight on each card*/
 }
 #testimonial-carousel .card {
   @apply bg-light;
@@ -207,4 +210,21 @@ form {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
+}
+
+footer .address li {
+  --markerLeftSpace: 1.25rem;
+  padding-left: var(--markerLeftSpace);
+  position: relative;
+}
+footer .address li:before {
+  content: '';
+  position: absolute;
+  left: calc(0 * var(--markerLeftSpace));
+  top: 0.05rem;
+  height: 1rem;
+  width: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxMiAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuMDgyMDMgMC44MTc2MjdDNC42MjM4NSAwLjgxOTI4MSAzLjIyNTg2IDEuMzk5MjggMi4xOTQ3NyAyLjQzMDM3QzEuMTYzNjggMy40NjE0NiAwLjU4MzY4NSA0Ljg1OTQ0IDAuNTgyMDMxIDYuMzE3NjNDMC41ODIwMzEgMTEuMDIzOSA1LjU4MjAzIDE0LjU3ODMgNS43OTUxNiAxNC43MjdDNS44NzkyMyAxNC43ODU5IDUuOTc5MzkgMTQuODE3NSA2LjA4MjAzIDE0LjgxNzVDNi4xODQ2OCAxNC44MTc1IDYuMjg0ODQgMTQuNzg1OSA2LjM2ODkxIDE0LjcyN0M2LjU4MjAzIDE0LjU3ODMgMTEuNTgyIDExLjAyMzkgMTEuNTgyIDYuMzE3NjNDMTEuNTgwNCA0Ljg1OTQ0IDExLjAwMDQgMy40NjE0NiA5Ljk2OTI5IDIuNDMwMzdDOC45MzgyIDEuMzk5MjggNy41NDAyMSAwLjgxOTI4MSA2LjA4MjAzIDAuODE3NjI3Wk02LjA4MjAzIDQuMzE3NjNDNi40Nzc1OSA0LjMxNzYzIDYuODY0MjcgNC40MzQ5MyA3LjE5MzE3IDQuNjU0NjlDNy41MjIwNyA0Ljg3NDQ1IDcuNzc4NDIgNS4xODY4MSA3LjkyOTc5IDUuNTUyMjZDOC4wODExNyA1LjkxNzcxIDguMTIwNzcgNi4zMTk4NSA4LjA0MzYgNi43MDc4MUM3Ljk2NjQzIDcuMDk1NzcgNy43NzU5NSA3LjQ1MjE0IDcuNDk2MjQgNy43MzE4NEM3LjIxNjU0IDguMDExNTUgNi44NjAxNyA4LjIwMjAzIDYuNDcyMjEgOC4yNzkyQzYuMDg0MjUgOC4zNTYzNyA1LjY4MjEyIDguMzE2NzYgNS4zMTY2NiA4LjE2NTM5QzQuOTUxMjEgOC4wMTQwMSA0LjYzODg1IDcuNzU3NjcgNC40MTkwOSA3LjQyODc3QzQuMTk5MzMgNy4wOTk4NyA0LjA4MjAzIDYuNzEzMTkgNC4wODIwMyA2LjMxNzYzQzQuMDgyMDMgNS43ODcxOSA0LjI5Mjc0IDUuMjc4NDkgNC42Njc4MiA0LjkwMzQxQzUuMDQyODkgNC41MjgzNCA1LjU1MTYgNC4zMTc2MyA2LjA4MjAzIDQuMzE3NjNaIiBmaWxsPSIjMzIzMDMyIi8+Cjwvc3ZnPgo=');
 }

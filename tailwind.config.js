@@ -26,6 +26,8 @@ module.exports = {
       darkerGray: '#666666',
       light: '#f7f4f0',
       formGray: '#92918f',
+      footerGold: '#e4dacd',
+      footerTxtColor: '#4A4A4A',
     },
   },
   safelist: [

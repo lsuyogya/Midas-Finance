@@ -99,3 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   }).mount();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  feather.replace();
+});

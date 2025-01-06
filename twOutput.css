@@ -92,6 +92,13 @@ main {
   /* padding-top: var(--header-height, 4rem); */
 }
 
+button,
+input,
+textarea,
+label {
+  font-family: 'Biryani';
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -108,6 +115,10 @@ main {
 
 .banner-full-no-header {
   max-height: calc(100vh - var(--header-height));
+}
+
+.banner-small {
+  min-height: 25vh;
 }
 
 .btn-primary {

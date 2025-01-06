@@ -92,6 +92,13 @@ main {
   /* padding-top: var(--header-height, 4rem); */
 }
 
+button,
+input,
+textarea,
+label {
+  font-family: 'Biryani';
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -108,6 +115,10 @@ main {
 
 .banner-full-no-header {
   max-height: calc(100vh - var(--header-height));
+}
+
+.banner-small {
+  min-height: 25vh;
 }
 
 .btn-primary {
@@ -1313,6 +1324,10 @@ h1,
   padding-bottom: 2rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1331,14 +1346,6 @@ h1,
 
 .pt-\[6\%\] {
   padding-top: 6%;
-}
-
-.pb-8 {
-  padding-bottom: 2rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .text-left {

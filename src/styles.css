@@ -84,11 +84,21 @@ main {
   /* padding-top: var(--header-height, 4rem); */
 }
 
+button,
+input,
+textarea,
+label {
+  font-family: 'Biryani';
+}
+
 .container {
   @apply mx-auto px-2 md:px-0;
 }
 .banner-full-no-header {
   max-height: calc(100vh - var(--header-height));
+}
+.banner-small {
+  min-height: 25vh;
 }
 .btn-primary {
   --_borderWidth: 2px;

@@ -26,6 +26,7 @@ module.exports = {
       secondary: '#9b51b4',
       customGray: '#323032',
       darkerGray: '#666666',
+      lighterGray: '#a1a1a1',
       light: '#f7f4f0',
       formGray: '#92918f',
       footerGold: '#e4dacd',

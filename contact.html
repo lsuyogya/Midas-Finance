@@ -1,0 +1,846 @@
+<!-- npx tailwindcss -i ./src/tw.css -o ./src/twOutput.css --watch -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Midas</title>
+    <script
+      src="./script.js"
+      defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"
+      defer></script>
+    <link
+      rel="stylesheet"
+      href="./twOutput.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
+      defer></script>
+  </head>
+  <body class="font-biryani">
+    <header
+      id="header"
+      class="bg-white sticky top-0 px-4 md:px-16 w-full transition-transform duration-300 ease-in-out z-50">
+      <div class="mx-auto pr-8 max-w-[100vw] flex justify-between items-center">
+        <div class="flex items-center">
+          <div class="logoContainer bg-customGray p-4">
+            <img
+              src="./assets/images/Logo.png"
+              alt="Logo"
+              class="w-auto h-auto" />
+          </div>
+        </div>
+        <nav class="hidden md:flex space-x-4 py-2 text-sm">
+          <a
+            href="#"
+            class="text-gray-700 hover:text-gray-900"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 hover:text-gray-900"
+            >About</a
+          >
+          <div class="relative group">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-gray-900 flex items-center">
+              Products
+              <svg
+                class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <div
+              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Product 1</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Product 2</a
+              >
+            </div>
+          </div>
+          <a
+            href="#"
+            class="text-gray-700 hover:text-gray-900"
+            >Resources</a
+          >
+          <div class="relative group">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-gray-900 flex items-center">
+              Calculator
+              <svg
+                class="ml-1 w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <div
+              class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Calculator 1</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Calculator 2</a
+              >
+            </div>
+          </div>
+          <a
+            href="#"
+            class="text-gray-700 hover:text-gray-900"
+            >Contact</a
+          >
+        </nav>
+        <button
+          id="burger"
+          class="md:hidden text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-300">
+      <div class="flex justify-between items-center pr-4 border-b">
+        <div class="flex items-center">
+          <div class="logoContainer bg-customGray p-4">
+            <img
+              src="./assets/images/Logo.png"
+              alt="Logo"
+              class="w-auto h-auto" />
+          </div>
+        </div>
+        <button
+          id="close-burger"
+          class="text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="p-4">
+        <a
+          href="#"
+          class="block py-2 text-gray-700 hover:bg-gray-100"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="block py-2 text-gray-700 hover:bg-gray-100"
+          >About</a
+        >
+        <div class="relative">
+          <button
+            class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
+            onclick="toggleDropdown('mobile-products')">
+            Products
+            <svg
+              class="ml-1 w-4 h-4 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div
+            id="mobile-products"
+            class="hidden pl-4">
+            <a
+              href="#"
+              class="block py-2 text-gray-700 hover:bg-gray-100"
+              >Product 1</a
+            >
+            <a
+              href="#"
+              class="block py-2 text-gray-700 hover:bg-gray-100"
+              >Product 2</a
+            >
+          </div>
+        </div>
+        <a
+          href="#"
+          class="block py-2 text-gray-700 hover:bg-gray-100"
+          >Resources</a
+        >
+        <div class="relative">
+          <button
+            class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
+            onclick="toggleDropdown('mobile-calculator')">
+            Calculator
+            <svg
+              class="ml-1 w-4 h-4 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div
+            id="mobile-calculator"
+            class="hidden pl-4">
+            <a
+              href="#"
+              class="block py-2 text-gray-700 hover:bg-gray-100"
+              >Calculator 1</a
+            >
+            <a
+              href="#"
+              class="block py-2 text-gray-700 hover:bg-gray-100"
+              >Calculator 2</a
+            >
+          </div>
+        </div>
+        <a
+          href="#"
+          class="block py-2 text-gray-700 hover:bg-gray-100"
+          >Contact</a
+        >
+      </nav>
+    </div>
+    <main class="min-h-[100vh] text-darkerGray">
+      <section class="bg-light p-4 md:pb-0 md:pl-16 md:pr-0 flex">
+        <div class="banner-small overflow-hidden my-auto py-12">
+          <small
+            ><a
+              href="/"
+              class="contents"
+              >Home
+            </a>
+            / Contact Us
+          </small>
+          <h1 class="h1 uppercase">Contact Us</h1>
+        </div>
+      </section>
+
+      <section class="contactUs mt-8 md:mt-24 px-4 my-8 md:px-16 md:my-24">
+        <div class="grid lg:grid-cols-2 gap-4">
+          <div class="txtWrapper">
+            <h1 class="h1 uppercase max-w-[23ch] mb-4">
+              Let’s Connect and Achieve Your Financial Goals Together
+            </h1>
+            <p class="max-w-[55ch] break-words mb-4">
+              We’re here to help you with personalized advice and expert
+              guidance every step of the way. Reach out to us today!
+            </p>
+            <div class="grid gap-2">
+              <div class="flex gap-2 content-center">
+                <div class="iconWrapper">
+                  <i
+                    data-feather="map-pin"
+                    class="max-w-4">
+                  </i>
+                </div>
+                <a
+                  href="https://maps.app.goo.gl/Btw96g54aStyUBGi8"
+                  class="contents footerTxtColor">
+                  <span class="content-center my-auto"
+                    >Benowa QLD 4217, NSW 2213</span
+                  >
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <div class="iconWrapper">
+                  <i
+                    data-feather="phone"
+                    class="max-w-4">
+                  </i>
+                </div>
+                <a
+                  href="tel:+61433261767"
+                  class="contents footerTxtColor">
+                  <span class="content-center my-auto">+61 433 261 767</span>
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <div class="iconWrapper">
+                  <i
+                    data-feather="mail"
+                    class="max-w-4">
+                  </i>
+                </div>
+                <a
+                  href="mail-to:mihir@midasfinance.com.au"
+                  class="contents footerTxtColor">
+                  <span class="content-center my-auto"
+                    >mihir@midasfinance.com.au</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="formWrapper max-w-[700px] mx-auto">
+            <form>
+              <div class="inputGrp">
+                <input
+                  id="fullName"
+                  type="text"
+                  placeholder="Full Name" />
+              </div>
+
+              <div class="inputGrp">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email" />
+              </div>
+              <div class="inputGrp">
+                <input
+                  id="message"
+                  type="text"
+                  placeholder="I'd like to ..." />
+              </div>
+              <div class="inputGrp">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email" />
+              </div>
+              <div class="inputGrp md:grid-cols-2">
+                <input
+                  id="mobileNo"
+                  type="text"
+                  placeholder="Mobile no" />
+
+                <input
+                  id="postCode"
+                  type="text"
+                  placeholder="Postcode" />
+              </div>
+              <div class="inputGrp">
+                <select id="day">
+                  <option
+                    value=""
+                    disabled
+                    selected>
+                    Select your availability
+                  </option>
+                  <option value="sunday">Sunday</option>
+                  <option value="monday">Monday</option>
+                  <option value="tuesday">Tuesday</option>
+                  <option value="wednesday">Wednesday</option>
+                  <option value="thursday">Thursday</option>
+                  <option value="friday">Friday</option>
+                </select>
+              </div>
+              <div class="inputGrp">
+                <button class="btn-primary px-4 py-2 w-full">
+                  Book A Time
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section
+        class="mapEmbed min-h-[300px] w-full h-[40vh] px-4 my-8 md:px-16 md:my-24">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2316.9902353559282!2d-111.60679012286487!3d54.49839578790422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a6c3b77669fe5f%3A0x9181ddb6f4ab2438!2sRoad%20Rd%2C%20Lac%20La%20Biche%2C%20AB%20T0A%201S0%2C%20Canada!5e0!3m2!1sen!2snp!4v1736232792333!5m2!1sen!2snp"
+          class="w-full h-full"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+      <section class="ourTeam px-4 my-8 md:px-16 md:my-24">
+        <h1 class="h1 uppercase mb-4">
+          We're Everywhere You Need Us in Australia
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-12">
+          <div class="addressCard">
+            <div class="txtWrapper text-customGray content-end grid gap-2">
+              <strong class="name">Mihir Shrestha</strong>
+
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="map-pin"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="https://maps.app.goo.gl/Btw96g54aStyUBGi8"
+                  class="contents footerTxtColor">
+                  <span>Benowa QLD 4217, NSW 2213</span>
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="phone"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="tel:+61433261767"
+                  class="content footerTxtColor"
+                  ><span>+61 433 261 767</span></a
+                >
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="mail"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="mail-to:mihir@midasfinance.com.au"
+                  class="content footerTxtColor">
+                  <span>mihir@midasfinance.com.au</span>
+                </a>
+              </div>
+
+              <a
+                href="#"
+                class="text-primaryDarker max-w-max flex gap-2 pr-2 relative content-center after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-[1px] after:bg-primaryDarker">
+                Get Direction
+                <i
+                  data-feather="chevron-right"
+                  class="h-4 my-auto"></i>
+              </a>
+            </div>
+          </div>
+          <div class="addressCard">
+            <div class="txtWrapper text-customGray content-end grid gap-2">
+              <strong class="name">Mihir Shrestha</strong>
+
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="map-pin"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="https://maps.app.goo.gl/Btw96g54aStyUBGi8"
+                  class="contents footerTxtColor">
+                  <span>Benowa QLD 4217, NSW 2213</span>
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="phone"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="tel:+61433261767"
+                  class="content footerTxtColor"
+                  ><span>+61 433 261 767</span></a
+                >
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="mail"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="mail-to:mihir@midasfinance.com.au"
+                  class="content footerTxtColor">
+                  <span>mihir@midasfinance.com.au</span>
+                </a>
+              </div>
+
+              <a
+                href="#"
+                class="text-primaryDarker max-w-max flex gap-2 pr-2 relative content-center after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-[1px] after:bg-primaryDarker">
+                Get Direction
+                <i
+                  data-feather="chevron-right"
+                  class="h-4 my-auto"></i>
+              </a>
+            </div>
+          </div>
+          <div class="addressCard">
+            <div class="txtWrapper text-customGray content-end grid gap-2">
+              <strong class="name">Mihir Shrestha</strong>
+
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="map-pin"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="https://maps.app.goo.gl/Btw96g54aStyUBGi8"
+                  class="contents footerTxtColor">
+                  <span>Benowa QLD 4217, NSW 2213</span>
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="phone"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="tel:+61433261767"
+                  class="content footerTxtColor"
+                  ><span>+61 433 261 767</span></a
+                >
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="mail"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="mail-to:mihir@midasfinance.com.au"
+                  class="content footerTxtColor">
+                  <span>mihir@midasfinance.com.au</span>
+                </a>
+              </div>
+
+              <a
+                href="#"
+                class="text-primaryDarker max-w-max flex gap-2 pr-2 relative content-center after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-[1px] after:bg-primaryDarker">
+                Get Direction
+                <i
+                  data-feather="chevron-right"
+                  class="h-4 my-auto"></i>
+              </a>
+            </div>
+          </div>
+          <div class="addressCard">
+            <div class="txtWrapper text-customGray content-end grid gap-2">
+              <strong class="name">Mihir Shrestha</strong>
+
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="map-pin"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="https://maps.app.goo.gl/Btw96g54aStyUBGi8"
+                  class="contents footerTxtColor">
+                  <span>Benowa QLD 4217, NSW 2213</span>
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="phone"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="tel:+61433261767"
+                  class="content footerTxtColor"
+                  ><span>+61 433 261 767</span></a
+                >
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="mail"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="mail-to:mihir@midasfinance.com.au"
+                  class="content footerTxtColor">
+                  <span>mihir@midasfinance.com.au</span>
+                </a>
+              </div>
+
+              <a
+                href="#"
+                class="text-primaryDarker max-w-max flex gap-2 pr-2 relative content-center after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-[1px] after:bg-primaryDarker">
+                Get Direction
+                <i
+                  data-feather="chevron-right"
+                  class="h-4 my-auto"></i>
+              </a>
+            </div>
+          </div>
+          <div class="addressCard">
+            <div class="txtWrapper text-customGray content-end grid gap-2">
+              <strong class="name">Mihir Shrestha</strong>
+
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="map-pin"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="https://maps.app.goo.gl/Btw96g54aStyUBGi8"
+                  class="contents footerTxtColor">
+                  <span>Benowa QLD 4217, NSW 2213</span>
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="phone"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="tel:+61433261767"
+                  class="content footerTxtColor"
+                  ><span>+61 433 261 767</span></a
+                >
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="mail"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="mail-to:mihir@midasfinance.com.au"
+                  class="content footerTxtColor">
+                  <span>mihir@midasfinance.com.au</span>
+                </a>
+              </div>
+
+              <a
+                href="#"
+                class="text-primaryDarker max-w-max flex gap-2 pr-2 relative content-center after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-[1px] after:bg-primaryDarker">
+                Get Direction
+                <i
+                  data-feather="chevron-right"
+                  class="h-4 my-auto"></i>
+              </a>
+            </div>
+          </div>
+          <div class="addressCard">
+            <div class="txtWrapper text-customGray content-end grid gap-2">
+              <strong class="name">Mihir Shrestha</strong>
+
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="map-pin"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="https://maps.app.goo.gl/Btw96g54aStyUBGi8"
+                  class="contents footerTxtColor">
+                  <span>Benowa QLD 4217, NSW 2213</span>
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="phone"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="tel:+61433261767"
+                  class="content footerTxtColor"
+                  ><span>+61 433 261 767</span></a
+                >
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="mail"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="mail-to:mihir@midasfinance.com.au"
+                  class="content footerTxtColor">
+                  <span>mihir@midasfinance.com.au</span>
+                </a>
+              </div>
+
+              <a
+                href="#"
+                class="text-primaryDarker max-w-max flex gap-2 pr-2 relative content-center after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-[1px] after:bg-primaryDarker">
+                Get Direction
+                <i
+                  data-feather="chevron-right"
+                  class="h-4 my-auto"></i>
+              </a>
+            </div>
+          </div>
+          <div class="addressCard">
+            <div class="txtWrapper text-customGray content-end grid gap-2">
+              <strong class="name">Mihir Shrestha</strong>
+
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="map-pin"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="https://maps.app.goo.gl/Btw96g54aStyUBGi8"
+                  class="contents footerTxtColor">
+                  <span>Benowa QLD 4217, NSW 2213</span>
+                </a>
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="phone"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="tel:+61433261767"
+                  class="content footerTxtColor"
+                  ><span>+61 433 261 767</span></a
+                >
+              </div>
+              <div class="flex gap-2 content-center">
+                <i
+                  data-feather="mail"
+                  class="max-w-4">
+                </i>
+                <a
+                  href="mail-to:mihir@midasfinance.com.au"
+                  class="content footerTxtColor">
+                  <span>mihir@midasfinance.com.au</span>
+                </a>
+              </div>
+
+              <a
+                href="#"
+                class="text-primaryDarker max-w-max flex gap-2 pr-2 relative content-center after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-[1px] after:bg-primaryDarker">
+                Get Direction
+                <i
+                  data-feather="chevron-right"
+                  class="h-4 my-auto"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="footer bg-footerGold px-4 py-8 pb-4 md:px-16 md:py-24 md:pb-6 text-footerTxtColor">
+      <div
+        class="footerTop grid sm:grid-cols-2 lg:grid-cols-[unset] lg:grid-flow-col gap-4">
+        <div class="grid-item sm:col-span-2 lg:col-span-1">
+          <a
+            href="#"
+            class="contents">
+            <img
+              src="./assets/images/FooterLogo.png"
+              alt=""
+              height="100"
+              width="200"
+              class="aspect-[332/113] h-auto" />
+          </a>
+        </div>
+        <div class="grid-item">
+          <h2 class="font-unna font-semibold text-2xl">Services</h2>
+          <nav>
+            <ul>
+              <li>Home loan</li>
+              <li>Debt Consolidation</li>
+              <li>Commercial Loan</li>
+              <li>Asset Finance</li>
+              <li>Insurance</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid-item">
+          <h2 class="font-unna font-semibold text-2xl">Quick Links</h2>
+          <nav>
+            <ul>
+              <li>Home</li>
+              <li>Calculator</li>
+              <li>Testimonial</li>
+              <li>About us</li>
+              <li>Contact us</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid-item">
+          <h2 class="font-unna font-semibold text-2xl">You Can Find Us At</h2>
+          <nav>
+            <ul class="address">
+              <li>Benowa QLD 4217</li>
+              <li>Middle Ridge, QLD 4350</li>
+              <li>Glenfield NSW 2167</li>
+              <li>Granville, NSW 2142</li>
+              <li>Southport QLD 4215</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid-item">
+          <div class="font-unna font-semibold text-2xl">&nbsp</div>
+          <nav>
+            <ul class="address">
+              <li>Panania, NSW 2213</li>
+              <li>Pimpama QLD 4209</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <hr class="border-[#a09990] my-8" />
+      <div class="footerBottom flex gap-4 flex-wrap justify-between">
+        <p>Copyright © 2024 Midas Finance. All Right Reserved</p>
+        <div class="socialLinks flex gap-2">
+          <a
+            href="#"
+            class="contents">
+            <img
+              src="./assets/images/fb.svg"
+              class="max-h-[27px] max-w-auto"
+              alt="" />
+          </a>
+          <a
+            href="#"
+            class="contents">
+            <img
+              src="./assets/images/x.svg"
+              class="max-h-[27px] max-w-auto"
+              alt="" />
+          </a>
+          <a
+            href="#"
+            class="contents">
+            <img
+              src="./assets/images/yt.svg"
+              class="max-h-[27px] max-w-auto"
+              alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

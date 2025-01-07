@@ -316,6 +316,36 @@ footer .address li:before {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxMiAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuMDgyMDMgMC44MTc2MjdDNC42MjM4NSAwLjgxOTI4MSAzLjIyNTg2IDEuMzk5MjggMi4xOTQ3NyAyLjQzMDM3QzEuMTYzNjggMy40NjE0NiAwLjU4MzY4NSA0Ljg1OTQ0IDAuNTgyMDMxIDYuMzE3NjNDMC41ODIwMzEgMTEuMDIzOSA1LjU4MjAzIDE0LjU3ODMgNS43OTUxNiAxNC43MjdDNS44NzkyMyAxNC43ODU5IDUuOTc5MzkgMTQuODE3NSA2LjA4MjAzIDE0LjgxNzVDNi4xODQ2OCAxNC44MTc1IDYuMjg0ODQgMTQuNzg1OSA2LjM2ODkxIDE0LjcyN0M2LjU4MjAzIDE0LjU3ODMgMTEuNTgyIDExLjAyMzkgMTEuNTgyIDYuMzE3NjNDMTEuNTgwNCA0Ljg1OTQ0IDExLjAwMDQgMy40NjE0NiA5Ljk2OTI5IDIuNDMwMzdDOC45MzgyIDEuMzk5MjggNy41NDAyMSAwLjgxOTI4MSA2LjA4MjAzIDAuODE3NjI3Wk02LjA4MjAzIDQuMzE3NjNDNi40Nzc1OSA0LjMxNzYzIDYuODY0MjcgNC40MzQ5MyA3LjE5MzE3IDQuNjU0NjlDNy41MjIwNyA0Ljg3NDQ1IDcuNzc4NDIgNS4xODY4MSA3LjkyOTc5IDUuNTUyMjZDOC4wODExNyA1LjkxNzcxIDguMTIwNzcgNi4zMTk4NSA4LjA0MzYgNi43MDc4MUM3Ljk2NjQzIDcuMDk1NzcgNy43NzU5NSA3LjQ1MjE0IDcuNDk2MjQgNy43MzE4NEM3LjIxNjU0IDguMDExNTUgNi44NjAxNyA4LjIwMjAzIDYuNDcyMjEgOC4yNzkyQzYuMDg0MjUgOC4zNTYzNyA1LjY4MjEyIDguMzE2NzYgNS4zMTY2NiA4LjE2NTM5QzQuOTUxMjEgOC4wMTQwMSA0LjYzODg1IDcuNzU3NjcgNC40MTkwOSA3LjQyODc3QzQuMTk5MzMgNy4wOTk4NyA0LjA4MjAzIDYuNzEzMTkgNC4wODIwMyA2LjMxNzYzQzQuMDgyMDMgNS43ODcxOSA0LjI5Mjc0IDUuMjc4NDkgNC42Njc4MiA0LjkwMzQxQzUuMDQyODkgNC41MjgzNCA1LjU1MTYgNC4zMTc2MyA2LjA4MjAzIDQuMzE3NjNaIiBmaWxsPSIjMzIzMDMyIi8+Cjwvc3ZnPgo=');
 }
 
+.teamCard {
+  --cardImgWidth: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  gap: 1rem;
+}
+
+.teamCard .imgWrapper {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 50%,
+    #f1e7a3 50%,
+    #d5c474 100%
+  );
+  max-width: var(--cardImgWidth);
+  position: relative;
+}
+
+.teamCard .imgWrapper img {
+  /* aspect-ratio: 1; */
+  width: min(var(--cardImgWidth), 100%);
+  height: auto;
+}
+
+.teamCard .txtWrapper {
+  max-width: var(--cardImgWidth);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -921,6 +951,14 @@ h1,
   top: -6%;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-\[2\%\] {
+  bottom: 2%;
+}
+
 .bottom-\[5\%\] {
   bottom: 5%;
 }
@@ -943,22 +981,6 @@ h1,
 
 .top-1 {
   top: 0.25rem;
-}
-
-.bottom-\[2\%\] {
-  bottom: 2%;
-}
-
-.right-\[-2\%\] {
-  right: -2%;
-}
-
-.-right-\[2\%\] {
-  right: -2%;
-}
-
-.bottom-0 {
-  bottom: 0px;
 }
 
 .-z-10 {
@@ -1091,6 +1113,10 @@ h1,
   height: 2rem;
 }
 
+.h-\[20\%\] {
+  height: 20%;
+}
+
 .h-\[25\%\] {
   height: 25%;
 }
@@ -1105,10 +1131,6 @@ h1,
 
 .h-full {
   height: 100%;
-}
-
-.h-\[20\%\] {
-  height: 20%;
 }
 
 .max-h-\[27px\] {
@@ -1144,8 +1166,12 @@ h1,
   width: 15%;
 }
 
-.w-\[25\%\] {
-  width: 25%;
+.w-\[24\%\] {
+  width: 24%;
+}
+
+.w-\[40\%\] {
+  width: 40%;
 }
 
 .w-auto {
@@ -1156,16 +1182,12 @@ h1,
   width: 100%;
 }
 
-.w-\[24\%\] {
-  width: 24%;
-}
-
-.w-\[40\%\] {
-  width: 40%;
-}
-
 .max-w-12 {
   max-width: 3rem;
+}
+
+.max-w-4 {
+  max-width: 1rem;
 }
 
 .max-w-\[100vw\] {
@@ -1187,6 +1209,18 @@ h1,
 .max-w-max {
   max-width: -moz-max-content;
   max-width: max-content;
+}
+
+.max-w-\[1100px\] {
+  max-width: 1100px;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
+.max-w-\[1400px\] {
+  max-width: 1400px;
 }
 
 .grow {
@@ -1247,12 +1281,20 @@ h1,
   align-content: center;
 }
 
+.content-end {
+  align-content: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .gap-12 {
@@ -1269,6 +1311,10 @@ h1,
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1347,26 +1393,6 @@ h1,
   padding: 1rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
-.p-16 {
-  padding: 4rem;
-}
-
-.p-12 {
-  padding: 3rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
-}
-
-.p-\[10\%\] {
-  padding: 10%;
-}
-
 .p-\[5\%\] {
   padding: 5%;
 }
@@ -1430,6 +1456,10 @@ h1,
   padding-top: 6%;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1489,6 +1519,11 @@ h1,
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.text-customGray {
+  --tw-text-opacity: 1;
+  color: rgb(50 48 50 / var(--tw-text-opacity, 1));
 }
 
 .text-darkerGray {
@@ -1615,10 +1650,6 @@ h1,
     order: -1;
   }
 
-  .md\:order-1 {
-    order: 1;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -1695,6 +1726,10 @@ h1,
 
   .md\:pr-16 {
     padding-right: 4rem;
+  }
+
+  .md\:pt-24 {
+    padding-top: 6rem;
   }
 
   .md\:text-2xl {

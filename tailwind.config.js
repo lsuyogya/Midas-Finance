@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: ['./src/**/*.{html,js}'],
@@ -21,6 +22,7 @@ module.exports = {
       yellow: colors.yellow,
       green: colors.green,
       primary: '#f1e7a3',
+      primaryDarker: '#a08c4d',
       secondary: '#9b51b4',
       customGray: '#323032',
       darkerGray: '#666666',
@@ -37,5 +39,24 @@ module.exports = {
     '-translate-y-full',
     'shadow-md',
   ],
-  plugins: [require('tailwindcss-motion')],
+  plugins: [
+    require('tailwindcss-motion'),
+    plugin(function ({ addBase, theme }) {
+      const colors = theme('colors');
+      const colorVars = Object.keys(colors).reduce((vars, color) => {
+        if (typeof colors[color] === 'string') {
+          vars[`--tw-color-${color}`] = colors[color];
+        } else {
+          Object.entries(colors[color]).forEach(([shade, value]) => {
+            vars[`--tw-color-${color}-${shade}`] = value;
+          });
+        }
+        return vars;
+      }, {});
+
+      addBase({
+        ':root': colorVars,
+      });
+    }),
+  ],
 };

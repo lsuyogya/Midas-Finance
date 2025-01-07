@@ -272,3 +272,15 @@ footer .address li:before {
 .teamCard .txtWrapper {
   max-width: var(--cardImgWidth);
 }
+
+.contactUs .iconWrapper {
+  padding: 0.25rem;
+  background-color: var(--tw-color-customGray);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  /* display: block; */
+  color: white;
+  width: 2rem;
+  place-content: center;
+}

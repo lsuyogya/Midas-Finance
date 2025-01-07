@@ -100,6 +100,27 @@ document.addEventListener('DOMContentLoaded', function () {
   }).mount();
 });
 
+//Feather icons replacement code
 document.addEventListener('DOMContentLoaded', () => {
-  feather.replace();
+  let retryCount = 0;
+  const maxRetries = 10;
+  const retryInterval = 1000; // 1 second
+
+  const tryFeatherReplace = () => {
+    try {
+      feather.replace();
+      console.log('Feather icons replaced successfully!');
+      clearInterval(retryTimer); // Stop retrying on success
+    } catch (error) {
+      retryCount++;
+      console.warn(`Attempt ${retryCount} failed: ${error.message}`);
+      if (retryCount >= maxRetries) {
+        clearInterval(retryTimer); // Stop retrying after max attempts
+        console.error('Failed to replace Feather icons after 10 attempts.');
+      }
+    }
+  };
+
+  const retryTimer = setInterval(tryFeatherReplace, retryInterval);
+  tryFeatherReplace(); // Try once immediately
 });

@@ -120,6 +120,7 @@ label {
 .banner-small {
   min-height: 25vh;
   align-content: center;
+  max-width: 70ch;
 }
 
 .btn-primary {
@@ -1336,6 +1337,7 @@ video {
   --tw-color-secondary: #9b51b4;
   --tw-color-customGray: #323032;
   --tw-color-darkerGray: #666666;
+  --tw-color-lighterGray: #a1a1a1;
   --tw-color-light: #f7f4f0;
   --tw-color-formGray: #92918f;
   --tw-color-footerGold: #e4dacd;

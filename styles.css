@@ -169,6 +169,10 @@ label {
   font-size: clamp(calc(24rem / 16), calc(44vw / 1400 * 100), calc(44rem / 16));
   line-height: 1.05;
 }
+.h2 {
+  font-size: clamp(calc(18rem / 16), calc(24vw / 1400 * 100), calc(24rem / 16));
+  line-height: 1.05;
+}
 .splide__arrow svg {
   fill: none;
 }
@@ -284,4 +288,12 @@ footer .address li:before {
   color: white;
   width: 2rem;
   place-content: center;
+}
+
+.grid-auto-400 {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+  @media (max-width: calc(400px + 16px * 2)) {
+    /* 16px is padding on small screens */
+    grid-template-columns: 1fr;
+  }
 }

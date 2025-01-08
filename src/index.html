@@ -19,9 +19,6 @@
     <link
       rel="stylesheet"
       href="./twOutput.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
-      defer></script>
   </head>
   <body class="font-biryani">
     <header
@@ -139,125 +136,125 @@
           </svg>
         </button>
       </div>
-    </header>
-    <div
-      id="mobile-menu"
-      class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-300">
-      <div class="flex justify-between items-center pr-4 border-b">
-        <div class="flex items-center">
-          <div class="logoContainer bg-customGray p-4">
-            <img
-              src="./assets/images/Logo.png"
-              alt="Logo"
-              class="w-auto h-auto" />
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-300">
+        <div class="flex justify-between items-center pr-4 border-b">
+          <div class="flex items-center">
+            <div class="logoContainer bg-customGray p-4">
+              <img
+                src="./assets/images/Logo.png"
+                alt="Logo"
+                class="w-auto h-auto" />
+            </div>
           </div>
+          <button
+            id="close-burger"
+            class="text-gray-700 focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
         </div>
-        <button
-          id="close-burger"
-          class="text-gray-700 focus:outline-none">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
+        <nav class="p-4">
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:bg-gray-100"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:bg-gray-100"
+            >About</a
+          >
+          <div class="relative">
+            <button
+              class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
+              onclick="toggleDropdown('mobile-products')">
+              Products
+              <svg
+                class="ml-1 w-4 h-4 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              id="mobile-products"
+              class="hidden pl-4">
+              <a
+                href="#"
+                class="block py-2 text-gray-700 hover:bg-gray-100"
+                >Product 1</a
+              >
+              <a
+                href="#"
+                class="block py-2 text-gray-700 hover:bg-gray-100"
+                >Product 2</a
+              >
+            </div>
+          </div>
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:bg-gray-100"
+            >Resources</a
+          >
+          <div class="relative">
+            <button
+              class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
+              onclick="toggleDropdown('mobile-calculator')">
+              Calculator
+              <svg
+                class="ml-1 w-4 h-4 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              id="mobile-calculator"
+              class="hidden pl-4">
+              <a
+                href="#"
+                class="block py-2 text-gray-700 hover:bg-gray-100"
+                >Calculator 1</a
+              >
+              <a
+                href="#"
+                class="block py-2 text-gray-700 hover:bg-gray-100"
+                >Calculator 2</a
+              >
+            </div>
+          </div>
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:bg-gray-100"
+            >Contact</a
+          >
+        </nav>
       </div>
-      <nav class="p-4">
-        <a
-          href="#"
-          class="block py-2 text-gray-700 hover:bg-gray-100"
-          >Home</a
-        >
-        <a
-          href="#"
-          class="block py-2 text-gray-700 hover:bg-gray-100"
-          >About</a
-        >
-        <div class="relative">
-          <button
-            class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
-            onclick="toggleDropdown('mobile-products')">
-            Products
-            <svg
-              class="ml-1 w-4 h-4 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div
-            id="mobile-products"
-            class="hidden pl-4">
-            <a
-              href="#"
-              class="block py-2 text-gray-700 hover:bg-gray-100"
-              >Product 1</a
-            >
-            <a
-              href="#"
-              class="block py-2 text-gray-700 hover:bg-gray-100"
-              >Product 2</a
-            >
-          </div>
-        </div>
-        <a
-          href="#"
-          class="block py-2 text-gray-700 hover:bg-gray-100"
-          >Resources</a
-        >
-        <div class="relative">
-          <button
-            class="w-full text-left py-2 flex items-center justify-between text-gray-700 hover:bg-gray-100"
-            onclick="toggleDropdown('mobile-calculator')">
-            Calculator
-            <svg
-              class="ml-1 w-4 h-4 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div
-            id="mobile-calculator"
-            class="hidden pl-4">
-            <a
-              href="#"
-              class="block py-2 text-gray-700 hover:bg-gray-100"
-              >Calculator 1</a
-            >
-            <a
-              href="#"
-              class="block py-2 text-gray-700 hover:bg-gray-100"
-              >Calculator 2</a
-            >
-          </div>
-        </div>
-        <a
-          href="#"
-          class="block py-2 text-gray-700 hover:bg-gray-100"
-          >Contact</a
-        >
-      </nav>
-    </div>
+    </header>
     <main class="min-h-[100vh] text-darkerGray">
       <section class="bg-light p-4 md:pb-0 md:pl-16 md:pr-0">
         <div class="banner-full-no-header overflow-hidden">
@@ -402,7 +399,7 @@
           </div>
         </div>
       </section>
-      <section class="weAreEverywhere:D px-4 py-8 md:px-16 md:py-24">
+      <section class="px-4 py-8 md:px-16 md:py-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           <div class="txtWrapper relative max-h-max my-auto">
             <h1 class="h1 uppercase mb-4">
@@ -416,7 +413,7 @@
               experience the Midas touch, no matter your location.
             </p>
             <div
-              class="absolute -left-6 md:-left-16 -bottom-[15%] w-[15%] h-8 -z-10 bg-polka"></div>
+              class="absolute -left-6 md:-left-16 bottom-[5%] w-[15%] h-8 -z-10 bg-polka"></div>
           </div>
           <div class="imgWrapper">
             <img
@@ -752,7 +749,7 @@
             src="./assets/images/loanAssessment.png"
             alt="" />
           <div
-            class="txtWrapper my-auto px-4 py-4 pb-12 lg:pl-0 lg:pr-16 lg:py-16 mx-auto">
+            class="txtWrapper my-auto px-4 py-4 lg:pl-0 lg:pr-16 lg:py-16 mx-auto">
             <h1 class="h1 uppercase mb-4 lg:max-w-[20ch]">
               Start Your Journey Toward a New Home Today
             </h1>
@@ -768,7 +765,7 @@
           </div>
         </div>
       </section>
-      <section class="resources px-4 py-8 md:px-16 md:py-24">
+      <section class="contactUs px-4 py-8 md:px-16 md:py-24">
         <h1 class="h1 uppercase mb-4 lg:max-w-[20ch]">
           Finance Insights & Resources
         </h1>
@@ -813,105 +810,8 @@
             </div>
           </div>
         </div>
-        <a
-          href="#"
-          class="btn-primary max-w-max btn-primary px-4 py-2 mt-4 mx-auto"
-          >View All</a
-        >
       </section>
     </main>
-    <footer
-      class="footer bg-footerGold px-4 py-8 pb-4 md:px-16 md:py-24 md:pb-6 text-footerTxtColor">
-      <div
-        class="footerTop grid sm:grid-cols-2 lg:grid-cols-[unset] lg:grid-flow-col gap-4">
-        <div class="grid-item sm:col-span-2 lg:col-span-1">
-          <a
-            href="#"
-            class="contents">
-            <img
-              src="./assets/images/FooterLogo.png"
-              alt=""
-              height="100"
-              width="200"
-              class="aspect-[332/113] h-auto" />
-          </a>
-        </div>
-        <div class="grid-item">
-          <h2 class="font-unna font-semibold text-2xl">Services</h2>
-          <nav>
-            <ul>
-              <li>Home loan</li>
-              <li>Debt Consolidation</li>
-              <li>Commercial Loan</li>
-              <li>Asset Finance</li>
-              <li>Insurance</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="grid-item">
-          <h2 class="font-unna font-semibold text-2xl">Quick Links</h2>
-          <nav>
-            <ul>
-              <li>Home</li>
-              <li>Calculator</li>
-              <li>Testimonial</li>
-              <li>About us</li>
-              <li>Contact us</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="grid-item">
-          <h2 class="font-unna font-semibold text-2xl">You Can Find Us At</h2>
-          <nav>
-            <ul class="address">
-              <li>Benowa QLD 4217</li>
-              <li>Middle Ridge, QLD 4350</li>
-              <li>Glenfield NSW 2167</li>
-              <li>Granville, NSW 2142</li>
-              <li>Southport QLD 4215</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="grid-item">
-          <div class="font-unna font-semibold text-2xl">&nbsp</div>
-          <nav>
-            <ul class="address">
-              <li>Panania, NSW 2213</li>
-              <li>Pimpama QLD 4209</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <hr class="border-[#a09990] my-8" />
-      <div class="footerBottom flex gap-4 flex-wrap justify-between">
-        <p>Copyright © 2024 Midas Finance. All Right Reserved</p>
-        <div class="socialLinks flex gap-2">
-          <a
-            href="#"
-            class="contents">
-            <img
-              src="./assets/images/fb.svg"
-              class="max-h-[27px] max-w-auto"
-              alt="" />
-          </a>
-          <a
-            href="#"
-            class="contents">
-            <img
-              src="./assets/images/x.svg"
-              class="max-h-[27px] max-w-auto"
-              alt="" />
-          </a>
-          <a
-            href="#"
-            class="contents">
-            <img
-              src="./assets/images/yt.svg"
-              class="max-h-[27px] max-w-auto"
-              alt="" />
-          </a>
-        </div>
-      </div>
-    </footer>
+    <footer class=""></footer>
   </body>
 </html>

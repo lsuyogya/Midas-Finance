@@ -127,7 +127,7 @@ label {
 }
 
 .bannerTitle {
-  font-size: clamp(calc(32rem / 16), 4.5vw, calc(69rem / 16));
+  font-size: clamp(calc(32rem / 16), 4.5vw, calc(50rem / 16));
   line-height: 0.95;
 }
 
@@ -296,4 +296,34 @@ footer .address li:before {
     /* 16px is padding on small screens */
     grid-template-columns: 1fr;
   }
+}
+
+section:has(> .banner-small) {
+  width: 100vw;
+  overflow-x: clip;
+}
+.banner-small :is(h1, small) {
+  z-index: 1;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .banner-small::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-inline-end: 100%;
+    inset-block: 0;
+    background-image: url('./assets/images/Rectangle 17.svg');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    background-position: 50% 25%;
+    z-index: 0;
+  }
+}
+
+.serviceDetail form {
+  grid-auto-rows: max-content;
 }

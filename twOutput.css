@@ -150,7 +150,7 @@ label {
 }
 
 .bannerTitle {
-  font-size: clamp(calc(32rem / 16), 4.5vw, calc(69rem / 16));
+  font-size: clamp(calc(32rem / 16), 4.5vw, calc(50rem / 16));
   line-height: 0.95;
 }
 
@@ -371,6 +371,37 @@ footer .address li:before {
 
     grid-template-columns: 1fr;
   }
+}
+
+section:has(> .banner-small) {
+  width: 100vw;
+  overflow-x: clip;
+}
+
+.banner-small :is(h1, small) {
+  z-index: 1;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .banner-small::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-inline-end: 100%;
+    inset-block: 0;
+    background-image: url('./assets/images/Rectangle 17.svg');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    background-position: 50% 25%;
+    z-index: 0;
+  }
+}
+
+.serviceDetail form {
+  grid-auto-rows: max-content;
 }
 
 *, ::before, ::after {
@@ -1456,10 +1487,6 @@ h1,
   inset: 0px;
 }
 
-.-bottom-\[15\%\] {
-  bottom: -15%;
-}
-
 .-left-6 {
   left: -1.5rem;
 }
@@ -1542,6 +1569,10 @@ h1,
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .ml-1 {
@@ -1790,8 +1821,16 @@ h1,
   resize: both;
 }
 
+.list-decimal {
+  list-style-type: decimal;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-\[90px_1fr\] {
@@ -1804,6 +1843,10 @@ h1,
 
 .place-content-center {
   place-content: center;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .content-center {
@@ -1824,6 +1867,10 @@ h1,
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-2 {
@@ -1858,6 +1905,10 @@ h1,
 
 .break-words {
   overflow-wrap: break-word;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-full {
@@ -1972,10 +2023,6 @@ h1,
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .pb-4 {
@@ -2379,6 +2426,14 @@ h1,
 }
 
 @media (min-width: 1024px) {
+  .lg\:sticky {
+    position: sticky;
+  }
+
+  .lg\:top-4 {
+    top: 1rem;
+  }
+
   .lg\:order-1 {
     order: 1;
   }
@@ -2413,6 +2468,10 @@ h1,
 
   .lg\:grid-cols-\[4fr_3fr\] {
     grid-template-columns: 4fr 3fr;
+  }
+
+  .lg\:grid-cols-\[6fr_4fr\] {
+    grid-template-columns: 6fr 4fr;
   }
 
   .lg\:grid-cols-\[unset\] {

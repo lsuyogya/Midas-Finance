@@ -258,24 +258,37 @@ footer .address li:before {
   @apply flex flex-wrap gap-4 content-end;
 }
 .teamCard .imgWrapper {
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    transparent 50%,
-    #f1e7a3 50%,
-    #d5c474 100%
-  );
   max-width: var(--cardImgWidth);
   position: relative;
 }
+.teamCard .imgWrapper::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, #f1e7a3 0%, #d5c474 100%);
+  transition: height 300ms ease-in-out;
+  z-index: 0;
+}
+.teamCard:hover .imgWrapper::before {
+  height: 100%;
+}
+
 .teamCard .imgWrapper img {
   /* aspect-ratio: 1; */
   width: min(var(--cardImgWidth), 100%);
   height: auto;
+  z-index: 1;
+  position: relative;
 }
 
 .teamCard .txtWrapper {
   max-width: var(--cardImgWidth);
+  .name {
+    @apply uppercase;
+  }
 }
 
 .contactUs .iconWrapper {
@@ -300,7 +313,8 @@ footer .address li:before {
 
 section:has(> .banner-small) {
   width: 100vw;
-  overflow-x: clip;
+  overflow: hidden;
+  position: relative;
 }
 .banner-small :is(h1, small) {
   z-index: 1;
@@ -311,7 +325,7 @@ section:has(> .banner-small) {
   .banner-small::before {
     content: '';
     position: absolute;
-    inset-inline-start: 50%;
+    inset-inline-start: 60%;
     inset-inline-end: 100%;
     inset-block: 0;
     background-image: url('./assets/images/Rectangle 17.svg');
@@ -326,4 +340,18 @@ section:has(> .banner-small) {
 
 .serviceDetail form {
   grid-auto-rows: max-content;
+}
+
+.card .imgWrapper {
+  overflow: clip;
+}
+.card .imgWrapper img {
+  scale: 1;
+  transition: scale 300ms ease-in-out;
+}
+.card:hover .imgWrapper img {
+  scale: 1.15;
+}
+#consultationButton {
+  transition: transform 300ms ease-in-out;
 }

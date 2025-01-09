@@ -36,14 +36,14 @@
               class="w-auto h-auto" />
           </div>
         </div>
-        <nav class="hidden md:flex space-x-4 py-2 text-sm">
+        <nav class="hidden md:flex space-x-8 py-2 text-sm">
           <a
-            href="#"
+            href="/index.html"
             class="text-gray-700 hover:text-gray-900"
             >Home</a
           >
           <a
-            href="#"
+            href="/about.html"
             class="text-gray-700 hover:text-gray-900"
             >About</a
           >
@@ -80,13 +80,13 @@
             </div>
           </div>
           <a
-            href="#"
+            href="/resources.html"
             class="text-gray-700 hover:text-gray-900"
             >Resources</a
           >
           <div class="relative group">
             <a
-              href="#"
+              href="/calculator.html"
               class="text-gray-700 hover:text-gray-900 flex items-center">
               Calculator
               <svg
@@ -117,7 +117,7 @@
             </div>
           </div>
           <a
-            href="#"
+            href="/contact.html"
             class="text-gray-700 hover:text-gray-900"
             >Contact</a
           >
@@ -171,12 +171,12 @@
       </div>
       <nav class="p-4">
         <a
-          href="#"
+          href="/index.html"
           class="block py-2 text-gray-700 hover:bg-gray-100"
           >Home</a
         >
         <a
-          href="#"
+          href="/about.html"
           class="block py-2 text-gray-700 hover:bg-gray-100"
           >About</a
         >
@@ -214,7 +214,7 @@
           </div>
         </div>
         <a
-          href="#"
+          href="/resources.html"
           class="block py-2 text-gray-700 hover:bg-gray-100"
           >Resources</a
         >
@@ -252,18 +252,61 @@
           </div>
         </div>
         <a
-          href="#"
+          href="/contact.html"
           class="block py-2 text-gray-700 hover:bg-gray-100"
           >Contact</a
         >
       </nav>
     </div>
-    <main class="min-h-[100vh] text-darkerGray">
+    <main class="min-h-[100vh] text-darkerGray relative">
+      <button
+        id="consultationButton"
+        class="fixed right-0 top-1/2 transform -translate-y-1/2 -rotate-90 bg-customGray text-primary px-4 py-2 z-50 rounded-t-lg">
+        Book A Consultation
+      </button>
+
+      <script>
+        const button = document.getElementById('consultationButton');
+
+        // Function to adjust the button's position
+        const adjustButtonPosition = () => {
+          const buttonWidth = button.offsetWidth; // Get the button's width
+          const offset = buttonWidth / 2; // Calculate half the width
+          button.style.transform = `translateY(-50%) translateX(${
+            offset - 12
+          }px) rotate(-90deg)`; // Default position
+        };
+
+        // Function to handle hover effect
+        const handleHover = (hover) => {
+          const buttonWidth = button.offsetWidth;
+          const offset = buttonWidth / 2;
+          if (hover) {
+            // On hover
+            button.style.transform = `translateY(-50%) translateX(${
+              offset - 16
+            }px) rotate(-90deg)`;
+          } else {
+            // On hover out
+            button.style.transform = `translateY(-50%) translateX(${
+              offset - 12
+            }px) rotate(-90deg)`;
+          }
+        };
+
+        // Add event listeners
+        window.addEventListener('load', adjustButtonPosition);
+        window.addEventListener('resize', adjustButtonPosition);
+
+        button.addEventListener('mouseenter', () => handleHover(true));
+        button.addEventListener('mouseleave', () => handleHover(false));
+      </script>
+
       <section class="bg-light p-4 md:pb-0 md:pl-16 md:pr-0 flex">
         <div class="banner-small overflow-hidden my-auto py-12">
           <small
             ><a
-              href="/"
+              href="/index.html"
               class="contents"
               >Home
             </a>
@@ -276,10 +319,12 @@
       <section class="resource-resources px-4 py-8 md:px-16 md:py-24">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight1.png"
-              alt="Resource 1"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight1.png"
+                alt="Resource 1"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 1</h2>
               <p class="line-clamp-3">
@@ -289,10 +334,12 @@
             </div>
           </div>
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight2.png"
-              alt="Resource 2"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight2.png"
+                alt="Resource 2"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 2</h2>
               <p class="line-clamp-3">
@@ -302,10 +349,12 @@
             </div>
           </div>
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight3.png"
-              alt="Resource 3"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight3.png"
+                alt="Resource 3"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 3</h2>
               <p class="line-clamp-3">
@@ -315,10 +364,12 @@
             </div>
           </div>
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight3.png"
-              alt="Resource 3"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight3.png"
+                alt="Resource 3"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 3</h2>
               <p class="line-clamp-3">
@@ -328,10 +379,12 @@
             </div>
           </div>
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight1.png"
-              alt="Resource 1"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight1.png"
+                alt="Resource 1"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 1</h2>
               <p class="line-clamp-3">
@@ -341,10 +394,12 @@
             </div>
           </div>
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight2.png"
-              alt="Resource 2"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight2.png"
+                alt="Resource 2"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 2</h2>
               <p class="line-clamp-3">
@@ -354,10 +409,12 @@
             </div>
           </div>
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight1.png"
-              alt="Resource 1"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight1.png"
+                alt="Resource 1"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 1</h2>
               <p class="line-clamp-3">
@@ -367,10 +424,12 @@
             </div>
           </div>
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight2.png"
-              alt="Resource 2"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight2.png"
+                alt="Resource 2"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 2</h2>
               <p class="line-clamp-3">
@@ -380,10 +439,12 @@
             </div>
           </div>
           <div class="card overflow-hidden">
-            <img
-              src="./assets/images/financeInsight3.png"
-              alt="Resource 3"
-              class="w-full aspect-[3/2] object-cover rounded-xl" />
+            <div class="imgWrapper w-full aspect-[3/2] object-cover rounded-xl">
+              <img
+                src="./assets/images/financeInsight3.png"
+                alt="Resource 3"
+                class="w-full aspect-[3/2] object-cover rounded-xl" />
+            </div>
             <div class="p-4">
               <h2 class="text-lg font-bold">Resource 3</h2>
               <p class="line-clamp-3">

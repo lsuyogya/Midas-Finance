@@ -331,25 +331,39 @@ footer .address li:before {
 }
 
 .teamCard .imgWrapper {
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    transparent 50%,
-    #f1e7a3 50%,
-    #d5c474 100%
-  );
   max-width: var(--cardImgWidth);
   position: relative;
+}
+
+.teamCard .imgWrapper::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, #f1e7a3 0%, #d5c474 100%);
+  transition: height 300ms ease-in-out;
+  z-index: 0;
+}
+
+.teamCard:hover .imgWrapper::before {
+  height: 100%;
 }
 
 .teamCard .imgWrapper img {
   /* aspect-ratio: 1; */
   width: min(var(--cardImgWidth), 100%);
   height: auto;
+  z-index: 1;
+  position: relative;
 }
 
 .teamCard .txtWrapper {
   max-width: var(--cardImgWidth);
+  .name {
+    text-transform: uppercase;
+  }
 }
 
 .contactUs .iconWrapper {
@@ -375,7 +389,8 @@ footer .address li:before {
 
 section:has(> .banner-small) {
   width: 100vw;
-  overflow-x: clip;
+  overflow: hidden;
+  position: relative;
 }
 
 .banner-small :is(h1, small) {
@@ -387,7 +402,7 @@ section:has(> .banner-small) {
   .banner-small::before {
     content: '';
     position: absolute;
-    inset-inline-start: 50%;
+    inset-inline-start: 60%;
     inset-inline-end: 100%;
     inset-block: 0;
     background-image: url('./assets/images/Rectangle 17.svg');
@@ -402,6 +417,23 @@ section:has(> .banner-small) {
 
 .serviceDetail form {
   grid-auto-rows: max-content;
+}
+
+.card .imgWrapper {
+  overflow: clip;
+}
+
+.card .imgWrapper img {
+  scale: 1;
+  transition: scale 300ms ease-in-out;
+}
+
+.card:hover .imgWrapper img {
+  scale: 1.15;
+}
+
+#consultationButton {
+  transition: transform 300ms ease-in-out;
 }
 
 *, ::before, ::after {
@@ -1531,6 +1563,10 @@ h1,
   top: 0.25rem;
 }
 
+.top-1\/2 {
+  top: 50%;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -1792,6 +1828,11 @@ h1,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-translate-y-full {
   --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1799,6 +1840,11 @@ h1,
 
 .translate-y-0 {
   --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-rotate-90 {
+  --tw-rotate: -90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1893,10 +1939,10 @@ h1,
   gap: 2rem;
 }
 
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .self-center {
@@ -1929,6 +1975,11 @@ h1,
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .border {
@@ -2147,6 +2198,11 @@ h1,
   color: rgb(34 197 94 / var(--tw-text-opacity, 1));
 }
 
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(241 231 163 / var(--tw-text-opacity, 1));
+}
+
 .text-primaryDarker {
   --tw-text-opacity: 1;
   color: rgb(160 140 77 / var(--tw-text-opacity, 1));
@@ -2171,6 +2227,10 @@ h1,
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-opacity {

@@ -436,6 +436,10 @@ section:has(> .banner-small) {
   transition: transform 300ms ease-in-out;
 }
 
+a:has(> .mapPin) {
+  cursor: pointer;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1517,6 +1521,10 @@ h1,
 
 .inset-0 {
   inset: 0px;
+}
+
+.-bottom-\[5\%\] {
+  bottom: -5%;
 }
 
 .-left-6 {

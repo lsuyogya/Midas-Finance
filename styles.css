@@ -355,3 +355,7 @@ section:has(> .banner-small) {
 #consultationButton {
   transition: transform 300ms ease-in-out;
 }
+
+a:has(> .mapPin) {
+  cursor: pointer;
+}
